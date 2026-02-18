@@ -1,0 +1,355 @@
+/* ============================================================
+   SEED THEME — COMPONENT STYLES
+   ============================================================ */
+
+/* ── Generic containers ──────────────────────────────────── */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.button,
+.button--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.button--primary:hover {
+    background-color: var(--color-accent-hover);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================================================
+   HEADER
+   Strategy:
+   - .site-header          → full-width white bar, fixed top
+   - .site-header__inner   → flex row, width = fit-content,
+                              centered on the page with mx-auto.
+                              Logo + Menu + Icons sit TOGETHER
+                              compactly, not edge-to-edge.
+   ============================================================ */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  The inner wrapper:
+  - NOT width:100%. Instead it's as wide as its content needs to be.
+  - max-width stops it from getting too wide on ultra-wide screens.
+  - margin: 0 auto centers the whole group.
+*/
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 1280px;
+    width: 100%;
+    /* fills up to max-width, then is centered */
+    gap: 0;
+}
+
+/* ── Branding — fixed, no shrink ─────────────────────────── */
+.site-header__branding {
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
+.site-header__logo-link {
+    display: block;
+    line-height: 0;
+}
+
+.site-header__logo,
+.site-header__branding img {
+    height: 54px;
+    width: auto;
+    display: block;
+}
+
+/* Drupal wraps branding in extra divs — flatten them */
+.site-header__branding>div,
+.site-header__branding>div>div {
+    display: contents;
+}
+
+/* ── Desktop Navigation ───────────────────────────────────── */
+.site-header__nav {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .site-header__nav {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        /* take all space between logo and icons */
+        justify-content: center;
+        /* center the menu items within that space */
+    }
+}
+
+
+/* Menu list — items sit naturally next to each other */
+.site-header__nav ul {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.site-header__nav ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav link */
+.site-header__nav ul li a {
+    display: block;
+    padding: 0.4rem 1rem;
+    font-size: var(--font-size-xs);
+    /* 12px */
+    font-weight: 500;
+    color: var(--seed-gray-700);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-header__nav ul li a:hover {
+    color: var(--seed-blue-600);
+    text-decoration: none;
+}
+
+/* Active state */
+.site-header__nav ul li a[aria-current="page"],
+.site-header__nav ul li a.is-active:not([data-drupal-link-system-path="<front>"]) {
+    background-color: var(--seed-blue-600);
+    color: #ffffff !important;
+    border-radius: 0.25rem;
+}
+
+.site-header__nav ul li:first-child a[data-drupal-link-system-path="<front>"].is-active {
+    background-color: var(--seed-blue-600);
+    color: #ffffff !important;
+    border-radius: 0.25rem;
+}
+
+/* ── Icons — fixed, no shrink, after the menu ─────────────── */
+.site-header__icons {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+/* Icon button */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    color: var(--seed-gray-500);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    position: relative;
+    padding: 0;
+}
+
+.icon-btn:hover {
+    color: var(--seed-blue-600);
+    background-color: var(--seed-blue-50);
+}
+
+/* ── Language Dropdown ───────────────────────────────────── */
+.icon-btn--lang {
+    position: relative;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid var(--seed-gray-200);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    min-width: 130px;
+    z-index: 200;
+}
+
+.icon-btn--lang:hover .lang-dropdown,
+.icon-btn--lang:focus-within .lang-dropdown {
+    display: block;
+}
+
+.lang-dropdown ul {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.lang-dropdown ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-sm);
+    color: var(--seed-gray-700);
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.lang-dropdown ul li a:hover {
+    background-color: var(--seed-gray-50);
+    color: var(--seed-blue-600);
+}
+
+/* ── Mobile Hamburger ────────────────────────────────────── */
+.site-header__hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    color: var(--seed-gray-700);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    margin-left: 0.5rem;
+}
+
+.site-header__hamburger:hover {
+    color: var(--seed-blue-600);
+    background-color: var(--seed-gray-200);
+}
+
+@media (min-width: 1024px) {
+    .site-header__hamburger {
+        display: none;
+    }
+}
+
+/* ── Mobile Nav Panel ────────────────────────────────────── */
+.site-header__mobile-nav {
+    display: none;
+    background: #ffffff;
+    border-top: 1px solid var(--seed-gray-200);
+    padding: 0.5rem 1rem 0.75rem;
+}
+
+.site-header__mobile-nav.is-open {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .site-header__mobile-nav {
+        display: none !important;
+    }
+}
+
+.site-header__mobile-nav ul {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header__mobile-nav ul li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--seed-gray-700);
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-header__mobile-nav ul li a:hover {
+    color: var(--seed-blue-600);
+}
+
+.site-header__mobile-nav ul li a.is-active,
+.site-header__mobile-nav ul li a[aria-current="page"] {
+    background-color: var(--seed-blue-600);
+    color: #ffffff !important;
+}
+
+/* ── Body offset for fixed header ────────────────────────── */
+body {
+    padding-top: 72px;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.region-footer {
+    background-color: var(--seed-gray-900);
+    color: var(--seed-gray-300);
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    color: #ffffff;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.footer-column a {
+    color: var(--seed-gray-400);
+    font-size: var(--font-size-sm);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}

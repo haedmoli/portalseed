@@ -1,0 +1,9 @@
+global:
+  css:
+    base:
+      css/variables.css: {}
+      css/layout.css: {}
+      css/style.css: {}
+      css/typography.css: {}
+  js:
+    js/script.js: {}

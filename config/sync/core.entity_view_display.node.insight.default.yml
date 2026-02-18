@@ -1,0 +1,38 @@
+uuid: a16b1d79-d47f-4f82-9f72-fca8bea12e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.insight.body
+    - field.field.node.insight.field_article_category
+    - field.field.node.insight.field_image
+    - node.type.insight
+  module:
+    - text
+    - user
+id: node.insight.default
+targetEntityType: node
+bundle: insight
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_article_category: true
+  field_image: true
+  langcode: true

@@ -1,0 +1,94 @@
+<div class="layout-container">
+
+<header role="banner" class="site-header">
+  <div class="container site-header__inner">
+
+    {# Logo / Branding — direct img tag for full control #}
+    <div class="site-header__branding">
+      <a href="{{ path('<front>') }}" rel="home" class="site-header__logo-link">
+        <img
+          src="{{ base_path }}themes/custom/seed_theme/logo.png"
+          alt="{{ 'Seed EM'|t }}"
+          class="site-header__logo"
+        />
+      </a>
+    </div>
+
+
+    {# Desktop Navigation — page.primary_menu contains the menu block #}
+    <nav class="site-header__nav" aria-label="Menú principal">
+      {{ page.primary_menu }}
+    </nav>
+
+    {# Right-side icons + hamburger #}
+    <div class="site-header__icons">
+      {# Search icon #}
+      <button class="icon-btn icon-btn--search" aria-label="Buscar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+
+      {# Language / Globe icon with dropdown #}
+      <div class="icon-btn icon-btn--lang" role="navigation" aria-label="Selector de idioma" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <div class="lang-dropdown">
+          <ul>
+            <li><a href="/en" hreflang="en">English</a></li>
+            <li><a href="/es" hreflang="es">Español</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {# Hamburger — mobile only #}
+      <button class="site-header__hamburger" id="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  {# Mobile Navigation Panel #}
+  <div class="site-header__mobile-nav" id="mobile-nav" aria-hidden="true">
+    {{ page.primary_menu }}
+  </div>
+</header>
+
+
+  <main role="main" class="layout-content">
+    {% if page.breadcrumb %}
+      <div class="region-breadcrumb container">
+        {{ page.breadcrumb }}
+      </div>
+    {% endif %}
+
+    <div class="layout-main-wrapper container">
+      <div class="region-content">
+        {{ page.content }}
+      </div>
+
+      {% if page.sidebar %}
+        <aside class="region-sidebar">
+          {{ page.sidebar }}
+        </aside>
+      {% endif %}
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="region-footer">
+    <div class="container region-footer-container">
+      <div class="footer-column footer-first">
+        {{ page.footer_first }}
+      </div>
+      <div class="footer-column footer-second">
+        {{ page.footer_second }}
+      </div>
+      <div class="footer-column footer-third">
+        {{ page.footer_third }}
+      </div>
+      <div class="footer-column footer-fourth">
+        {{ page.footer_fourth }}
+      </div>
+    </div>
+  </footer>
+
+</div>

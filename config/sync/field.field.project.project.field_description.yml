@@ -1,0 +1,22 @@
+uuid: 97b75469-3d27-43a1-97e5-88242f614320
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.project.project
+    - field.storage.project.field_description
+  module:
+    - text
+id: project.project.field_description
+field_name: field_description
+entity_type: project
+bundle: project
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

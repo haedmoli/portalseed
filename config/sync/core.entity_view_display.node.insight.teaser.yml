@@ -1,0 +1,40 @@
+uuid: d33cee54-f255-4930-962c-b9276fff728c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.insight.body
+    - field.field.node.insight.field_article_category
+    - field.field.node.insight.field_image
+    - node.type.insight
+  module:
+    - text
+    - user
+id: node.insight.teaser
+targetEntityType: node
+bundle: insight
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_article_category: true
+  field_image: true
+  langcode: true

@@ -1,0 +1,29 @@
+name: 'Seed Theme'
+type: theme
+description: 'A custom dark theme for Portal Seed, based on design screenshots.'
+package: 'Custom'
+base theme: false
+core_version_requirement: ^10 || ^11
+logo: logo.png
+
+
+libraries:
+  - seed_theme/global
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_fourth: 'Footer Fourth'
+
+features:
+  - node_user_picture
+  - comment_user_picture
+  - comment_user_verification
+  - favicon
+  - logo

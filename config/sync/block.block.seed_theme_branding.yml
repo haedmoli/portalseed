@@ -1,0 +1,23 @@
+uuid: c5b04ded-8e79-45c5-80b5-c1864ed9cc76
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seed_theme
+id: seed_theme_branding
+theme: seed_theme
+region: header
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: ''
+  label_display: ''
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

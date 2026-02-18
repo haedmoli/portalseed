@@ -1,0 +1,109 @@
+/* ============================================================
+   SEED THEME — DESIGN TOKENS
+   Translated from tailwind.config.ts + Navigation.tsx
+   ============================================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+    /* ── Seed Blue Palette ─────────────────────────────────── */
+    --seed-blue-50: #f0f9ff;
+    --seed-blue-100: #e0f2fe;
+    --seed-blue-200: #bae6fd;
+    --seed-blue-300: #7dd3fc;
+    --seed-blue-400: #38bdf8;
+    --seed-blue-500: #0ea5e9;
+    --seed-blue-600: #0369a1;
+    /* ← link activo */
+    --seed-blue-700: #0c4a6e;
+    --seed-blue-800: #075985;
+    --seed-blue-900: #0c4a6e;
+    --seed-blue-950: #082f49;
+
+    /* ── Seed Gray Palette ─────────────────────────────────── */
+    --seed-gray-50: #f8fafc;
+    --seed-gray-100: #f1f5f9;
+    --seed-gray-200: #e2e8f0;
+    /* ← borde menú móvil */
+    --seed-gray-300: #cbd5e1;
+    --seed-gray-400: #94a3b8;
+    --seed-gray-500: #64748b;
+    --seed-gray-600: #475569;
+    --seed-gray-700: #334155;
+    /* ← color texto links */
+    --seed-gray-800: #1e293b;
+    --seed-gray-900: #0f172a;
+    --seed-gray-950: #020617;
+
+    /* ── Semantic Aliases ──────────────────────────────────── */
+    --color-accent: var(--seed-blue-600);
+    --color-accent-hover: var(--seed-blue-700);
+    --color-text-nav: var(--seed-gray-700);
+    --color-bg-body: #ffffff;
+    --color-bg-primary: #ffffff;
+
+    /* ── Typography ────────────────────────────────────────── */
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Poppins', 'Inter', sans-serif;
+    --font-size-xs: 0.75rem;
+    /* text-xs  = 12px */
+    --font-size-sm: 0.875rem;
+    /* text-sm  = 14px */
+    --font-size-base: 1rem;
+    /* text-base = 16px */
+
+    /* ── Layout ────────────────────────────────────────────── */
+    --container-max: 80rem;
+    /* max-w-7xl = 1280px */
+    --container-px: 2rem;
+    /* px-8 */
+    --header-height: 5rem;
+    /* h-20 = 80px */
+    --logo-height: 3rem;
+    /* h-12 = 48px */
+
+    /* ── Spacing ───────────────────────────────────────────── */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+}
+
+/* ── Base Reset ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--seed-gray-700);
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}

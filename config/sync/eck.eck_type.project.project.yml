@@ -1,0 +1,9 @@
+uuid: 1d3615ce-3efd-458f-bd0b-bc5916b78abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.project
+name: Project
+type: project
+description: null

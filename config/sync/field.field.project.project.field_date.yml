@@ -1,0 +1,21 @@
+uuid: cdc519a8-c94b-4f40-8a43-a06c93af6a96
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.project.project
+    - field.storage.project.field_date
+  module:
+    - datetime
+id: project.project.field_date
+field_name: field_date
+entity_type: project
+bundle: project
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

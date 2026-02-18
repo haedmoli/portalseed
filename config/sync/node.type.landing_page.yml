@@ -1,0 +1,11 @@
+uuid: dff22d9d-bbf0-4a70-817e-a5a139dcd3a6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Page'
+type: landing_page
+description: 'Flexible landing pages using Paragraphs.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

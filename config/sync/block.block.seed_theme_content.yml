@@ -1,0 +1,22 @@
+uuid: 56ec7e74-52de-4456-ac1e-982818da4b1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seed_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: seed_theme_content
+theme: seed_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,40 @@
+uuid: cdc8ed9b-c0eb-4581-94e3-5ac03c495ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.client.body
+    - field.field.node.client.field_client_type
+    - field.field.node.client.field_logo
+    - field.field.node.client.field_website
+    - node.type.client
+  module:
+    - text
+    - user
+id: node.client.default
+targetEntityType: node
+bundle: client
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_client_type: true
+  field_logo: true
+  field_website: true
+  langcode: true

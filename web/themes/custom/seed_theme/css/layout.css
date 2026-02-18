@@ -1,0 +1,31 @@
+/* layout.css — structural skeleton only */
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layout-content {
+    flex: 1;
+}
+
+/* Footer grid */
+.region-footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) 0;
+}
+
+@media (min-width: 768px) {
+    .region-footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .region-footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

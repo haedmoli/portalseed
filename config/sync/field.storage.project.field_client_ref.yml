@@ -1,0 +1,20 @@
+uuid: e81d38d0-b0fd-4c3a-8872-935f17376bb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: project.field_client_ref
+field_name: field_client_ref
+entity_type: project
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

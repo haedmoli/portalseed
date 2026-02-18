@@ -1,0 +1,11 @@
+uuid: c1b42828-91e5-42d9-8698-ad74a41fa341
+langcode: en
+status: true
+dependencies: {  }
+name: Insight
+type: insight
+description: 'Blog posts, news, and insights.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,19 @@
+uuid: 6372c551-5170-4b2f-b602-1e893882f5a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - text
+id: project.field_description
+field_name: field_description
+entity_type: project
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

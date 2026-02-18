@@ -1,0 +1,12 @@
+uuid: bcd93e5c-ad8f-4d7a-b7af-cc8fbbac3a97
+langcode: en
+status: null
+dependencies: {  }
+id: project
+label: Project
+description: null
+uid: true
+created: true
+changed: true
+title: true
+standalone_url: null

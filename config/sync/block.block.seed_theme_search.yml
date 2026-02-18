@@ -1,0 +1,21 @@
+uuid: eb8a5fc7-4357-458c-9cfc-a6b91f33e6da
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - seed_theme
+id: seed_theme_search
+theme: seed_theme
+region: header
+weight: 5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  label_display: ''
+  provider: search
+  page_id: null
+visibility: {  }

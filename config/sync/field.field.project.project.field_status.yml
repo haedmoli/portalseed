@@ -1,0 +1,21 @@
+uuid: db295e7d-1fcd-457a-83d5-fad57187b097
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.project.project
+    - field.storage.project.field_status
+  module:
+    - options
+id: project.project.field_status
+field_name: field_status
+entity_type: project
+bundle: project
+label: Status
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

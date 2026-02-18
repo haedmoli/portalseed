@@ -1,0 +1,22 @@
+uuid: 4299b919-3b56-4250-b107-791b5187e95e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_summary
+field_name: field_summary
+entity_type: node
+bundle: case_study
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

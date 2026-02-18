@@ -1,0 +1,9 @@
+uuid: dffbd225-5de4-4e4f-acc6-41c2ee70e5d3
+langcode: en
+status: true
+dependencies: {  }
+name: 'FAQ Category'
+vid: faq_category
+description: null
+weight: 0
+new_revision: false

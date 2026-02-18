@@ -1,0 +1,24 @@
+uuid: 3dcad8f4-c411-46b3-80cd-3b3a2e6e2d23
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.project.project
+    - field.storage.project.field_client_ref
+    - node.type.client
+id: project.project.field_client_ref
+field_name: field_client_ref
+entity_type: project
+bundle: project
+label: Client
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      client: client
+field_type: entity_reference
