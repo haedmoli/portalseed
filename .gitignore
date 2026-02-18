@@ -1,0 +1,37 @@
+# DDEV
+.ddev/.global_commands
+.ddev/db_snapshots
+.ddev/.ssh-auth-compose-full.yaml
+.ddev/.homeadditions
+.ddev/.downloads
+.ddev/commands/host/*
+.ddev/commands/db/*
+.ddev/commands/web/*
+!.ddev/commands/host/README.txt
+!.ddev/commands/db/README.txt
+!.ddev/commands/web/README.txt
+.ddev/config.local.yaml
+.ddev/import-db-src
+.ddev/mutagen/mutagen.yml
+.ddev/traefik/config/dynamic_custom_router.yaml
+.ddev/project_mutagen_config.yaml
+
+# Drupal
+/web/core
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+/web/sites/*/files
+/web/sites/*/settings.local.php
+/vendor
+/drush/contrib
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
