@@ -1,0 +1,23 @@
+uuid: ae4bbd5f-b2b0-4517-9b1a-6e5c07778834
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_link
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+id: paragraph.hero.field_banner_link
+field_name: field_banner_link
+entity_type: paragraph
+bundle: hero
+label: 'Banner Link'
+description: 'URL a la que lleva el banner al hacer clic.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

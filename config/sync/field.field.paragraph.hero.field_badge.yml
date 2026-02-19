@@ -1,0 +1,19 @@
+uuid: 4f419015-6189-40c5-8dd8-d2ce23b4e492
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_badge
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_badge
+field_name: field_badge
+entity_type: paragraph
+bundle: hero
+label: Badge/Tag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

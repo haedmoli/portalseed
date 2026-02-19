@@ -1,0 +1,22 @@
+uuid: 13d46808-d2d0-4163-9ca6-412cefd1d6a5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stats
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_stats
+field_name: field_stats
+entity_type: paragraph
+bundle: hero
+label: 'Stats Items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

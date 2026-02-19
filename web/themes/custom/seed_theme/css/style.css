@@ -447,3 +447,368 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/* ══════════════════════════════════════════════════════════
+   HERO – SINGLE CONSOLIDATED BLOCK (Pixel-Perfect)
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Hide System Metadata (Fallback) ───────────────────── */
+/* Template handles this for home_page, but CSS fallback for safety */
+body.path-frontpage .block-page-title-block,
+body.path-frontpage h1.page-title {
+    display: none !important;
+}
+
+/* Hide submitted info site-wide (disabled in content type settings, CSS fallback) */
+.node__meta,
+.node__submitted {
+    display: none !important;
+}
+
+/* ── Section ───────────────────────────────────────────── */
+.hero-section {
+    padding: 3rem 0 2rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* ── Grid ──────────────────────────────────────────────── */
+.hero-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: start;
+    }
+}
+
+/* ── Badge ─────────────────────────────────────────────── */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #E0F2FE;
+    color: #0369A1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #0EA5E9;
+    border-radius: 50%;
+}
+
+/* ── Title ─────────────────────────────────────────────── */
+.hero-title div,
+.hero-title h1,
+.hero-title h2 {
+    font-family: 'Inter', var(--font-heading), system-ui, sans-serif !important;
+    font-size: 2.75rem !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    color: #0F172A !important;
+    margin: 0 0 1.25rem 0 !important;
+}
+
+@media (min-width: 768px) {
+
+    .hero-title div,
+    .hero-title h1,
+    .hero-title h2 {
+        font-size: 3.25rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .hero-title div,
+    .hero-title h1,
+    .hero-title h2 {
+        font-size: 3.75rem !important;
+    }
+}
+
+.hero-title strong {
+    color: #0D9488 !important;
+    font-weight: 800 !important;
+}
+
+/* ── Description ───────────────────────────────────────── */
+.hero-description,
+.hero-description p {
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    color: #64748B !important;
+    margin-bottom: 0 !important;
+    max-width: 520px;
+}
+
+/* ── Feature Box (SeedCloud) ───────────────────────────── */
+.hero-feature-box {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.hero-feature-box .feature-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.hero-feature-box .feature-content strong {
+    display: block;
+    color: #0F172A;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.hero-feature-box .feature-content p {
+    font-size: 0.85rem !important;
+    color: #64748B !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.5 !important;
+}
+
+.hero-feature-box .feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero-feature-box .tag {
+    padding: 0.2rem 0.6rem !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
+
+.hero-feature-box .tag:nth-child(1) {
+    background-color: #DBEAFE !important;
+    color: #1E40AF !important;
+}
+
+.hero-feature-box .tag:nth-child(2) {
+    background-color: #FFEDD5 !important;
+    color: #9A3412 !important;
+}
+
+.hero-feature-box .tag:nth-child(3) {
+    background-color: #DCFCE7 !important;
+    color: #166534 !important;
+}
+
+/* ── Buttons ───────────────────────────────────────────── */
+.hero-actions {
+    margin-top: 1.75rem;
+}
+
+.hero-actions>div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.hero-actions>div>div {
+    display: inline-flex !important;
+}
+
+.hero-actions>div>div>a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.7rem 1.75rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    border-radius: 0.5rem !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    line-height: 1.4 !important;
+}
+
+/* Primary: "Iniciar Proyecto" */
+.hero-actions>div>div:first-child>a {
+    background-color: #00619E !important;
+    color: #fff !important;
+    border: 2px solid #00619E !important;
+}
+
+.hero-actions>div>div:first-child>a:hover {
+    background-color: #004E7E !important;
+    border-color: #004E7E !important;
+}
+
+/* Outline: "Ver SeedCloud" */
+.hero-actions>div>div:nth-child(2)>a {
+    background-color: #fff !important;
+    color: #334155 !important;
+    border: 1px solid #CBD5E1 !important;
+}
+
+.hero-actions>div>div:nth-child(2)>a:hover {
+    border-color: #94A3B8 !important;
+    background-color: #F8FAFC !important;
+}
+
+/* ── Image ─────────────────────────────────────────────── */
+.hero-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.hero-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Tooltips ──────────────────────────────────────────── */
+.hero-tooltip {
+    position: absolute;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    z-index: 20;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    animation: float 6s ease-in-out infinite;
+}
+
+.tooltip-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tooltip-top-left {
+    top: 12%;
+    left: -25px;
+    animation-delay: 0s;
+}
+
+.tooltip-mid-right {
+    top: 55%;
+    right: -25px;
+    animation-delay: 2s;
+    background-color: #00619E !important;
+    color: #fff !important;
+    text-align: center;
+    flex-direction: column;
+    padding: 0.6rem 0.75rem;
+    gap: 0.15rem;
+}
+
+.tooltip-bottom-right {
+    bottom: 10%;
+    right: -10px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ── Stats ─────────────────────────────────────────────── */
+.hero-stats {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #E2E8F0;
+    max-width: 550px;
+}
+
+.stats-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 3.5rem !important;
+    justify-content: flex-start !important;
+}
+
+.stats-grid .stat-item {
+    flex: 0 0 auto !important;
+    text-align: left;
+}
+
+.stats-grid .stat-item strong {
+    display: block;
+    font-family: 'Inter', var(--font-heading), system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00619E;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stats-grid .stat-item {
+    font-size: 0.85rem;
+    color: #64748B;
+    line-height: 1.4;
+}
+
+/* ── Banner Above Hero Image ───────────────────────────── */
+.hero-banner-overlay {
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-banner-overlay:hover {
+    transform: scale(1.02);
+}
+
+.hero-banner-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hero-banner-overlay .field--name-field-banner-image {
+    line-height: 0;
+}
+
+/* Ensure image wrapper flows normally */
+.hero-image-wrapper {
+    padding-bottom: 0;
+}

@@ -1,0 +1,112 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a hero paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ * - content: All field items. Use specific fields like content.field_title.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'view-mode--' ~ view_mode|clean_class,
+    'hero-section',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="container">
+    
+    <div class="hero-grid">
+      {# Left Column: Content #}
+      <div class="hero-content">
+        
+        {% if content.field_badge|render %}
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            {{ content.field_badge }}
+          </div>
+        {% endif %}
+
+        {% if content.field_title|render %}
+          <div class="hero-title">
+            {{ content.field_title }}
+          </div>
+        {% endif %}
+
+        {% if content.field_description|render %}
+          <div class="hero-description text-content">
+            {{ content.field_description }}
+          </div>
+        {% endif %}
+
+        {% if content.field_link|render %}
+          <div class="hero-actions">
+            {{ content.field_link }}
+          </div>
+        {% endif %}
+
+      </div>
+
+      {# Right Column: Image #}
+      <div class="hero-media">
+        {# Banner Above Image (Clickable, Administrable) #}
+        {% if content.field_banner_image|render %}
+          {% set banner_url = paragraph.field_banner_link.uri ? paragraph.field_banner_link.uri : '#' %}
+          <a href="{{ banner_url }}" class="hero-banner-overlay" target="_blank" rel="noopener noreferrer">
+            {{ content.field_banner_image }}
+          </a>
+        {% endif %}
+
+        <div class="hero-image-wrapper">
+           {% if content.field_image|render %}
+             {{ content.field_image }}
+           {% else %}
+             {# Fallback placeholder if no image #}
+             <div style="background-color: #1e293b; width: 100%; height: 400px; border-radius: 1rem;"></div>
+           {% endif %}
+
+           {# Floating Tooltips #}
+           <div class="hero-tooltip tooltip-top-left">
+             <span class="tooltip-icon" style="background: #bef264; color: #3f6212;">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+             </span>
+             <span>Drupal Certified</span>
+           </div>
+
+           <div class="hero-tooltip tooltip-mid-right">
+             <span style="font-size: 1.25rem; font-weight: 800; display: block;">24/7</span>
+             <span style="font-size: 0.75rem;">Soporte</span>
+           </div>
+
+           <div class="hero-tooltip tooltip-bottom-right">
+             <span class="tooltip-icon" style="background: #f97316; color: white; font-weight: 800; font-size: 10px;">SC</span>
+             <div style="line-height: 1.2;">
+               <strong style="display: block; color: #0f172a; font-size: 0.9rem;">SeedCloud</strong>
+               <span style="font-size: 0.75rem; color: #64748b;">Hosting Drupal</span>
+             </div>
+           </div>
+
+        </div>
+      </div>
+    </div>
+
+    {# Bottom Row: Stats #}
+    {% if content.field_stats|render %}
+      <div class="hero-stats">
+        <div class="stats-grid">
+          {% for key, item in content.field_stats %}
+             {% if key|first != '#' %}
+               <div class="stat-item">
+                 {{ item }}
+               </div>
+             {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</div>

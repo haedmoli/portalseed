@@ -1,0 +1,38 @@
+uuid: e97eaf9a-e039-4d99-a749-332e0c7dd2e5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_image
+    - paragraphs.paragraphs_type.hero
+  module:
+    - image
+id: paragraph.hero.field_banner_image
+field_name: field_banner_image
+entity_type: paragraph
+bundle: hero
+label: 'Banner Image'
+description: 'Imagen de banner que se superpone sobre la imagen principal del Hero. Ej: Drupal Certified Partner.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg gif webp svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

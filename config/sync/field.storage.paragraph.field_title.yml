@@ -1,18 +1,18 @@
-uuid: f26f3d30-c726-4f9a-af07-60774146f8fa
-langcode: en
+uuid: 7b59d4fd-c220-4694-83c2-76ab8d2384e2
+langcode: es
 status: true
 dependencies:
   module:
-    - link
     - paragraphs
-id: paragraph.field_link
-field_name: field_link
+    - text
+id: paragraph.field_title
+field_name: field_title
 entity_type: paragraph
-type: link
+type: text_long
 settings: {  }
-module: link
+module: text
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

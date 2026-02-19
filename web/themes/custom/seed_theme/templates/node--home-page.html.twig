@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for the Home Page content type.
+ *
+ * H1 is present for SEO/accessibility but visually hidden.
+ * Only renders field_components (paragraphs).
+ * No submitted info, no extra metadata.
+ */
+#}
+<article{{ attributes }}>
+
+  {# SEO H1 — present in DOM, visually hidden #}
+  <h1 class="visually-hidden">{{ label }}</h1>
+
+  {# Render paragraph components directly #}
+  {{ content.field_components }}
+
+</article>
