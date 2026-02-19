@@ -1,0 +1,23 @@
+uuid: bafb4b1c-3f39-4c55-aa6c-0032e682fdf5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:88888888-1111-1111-1111-111111111111'
+  module:
+    - block_content
+  theme:
+    - seed_theme
+id: seed_theme_footer_social
+theme: seed_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:88888888-1111-1111-1111-111111111111'
+settings:
+  id: 'block_content:88888888-1111-1111-1111-111111111111'
+  label: SÍGUENOS
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

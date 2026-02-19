@@ -1,0 +1,23 @@
+uuid: 039c5ea7-291c-4f03-8e96-ff0268e040a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:88888888-2222-2222-2222-222222222222'
+  module:
+    - block_content
+  theme:
+    - seed_theme
+id: seed_theme_footer_contact
+theme: seed_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:88888888-2222-2222-2222-222222222222'
+settings:
+  id: 'block_content:88888888-2222-2222-2222-222222222222'
+  label: 'Footer Contact Info'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

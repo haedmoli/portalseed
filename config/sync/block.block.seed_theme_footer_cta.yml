@@ -1,0 +1,23 @@
+uuid: ac1bc096-b6d7-4c13-837f-45eb58d8c2ff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:88888888-4444-4444-4444-444444444444'
+  module:
+    - block_content
+  theme:
+    - seed_theme
+id: seed_theme_footer_cta
+theme: seed_theme
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'block_content:88888888-4444-4444-4444-444444444444'
+settings:
+  id: 'block_content:88888888-4444-4444-4444-444444444444'
+  label: 'MIGRACIÓN A DRUPAL 11'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }
