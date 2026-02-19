@@ -455,7 +455,10 @@ body {
 /* ── Hide System Metadata (Fallback) ───────────────────── */
 /* Template handles this for home_page, but CSS fallback for safety */
 body.path-frontpage .block-page-title-block,
-body.path-frontpage h1.page-title {
+body.path-frontpage h1.page-title,
+body.path-frontpage .page-title,
+body.path-frontpage .region-content>h2,
+body.path-frontpage .block-system-main-block>h2 {
     display: none !important;
 }
 
@@ -811,4 +814,8 @@ body.path-frontpage h1.page-title {
 /* Ensure image wrapper flows normally */
 .hero-image-wrapper {
     padding-bottom: 0;
+}
+/* ── Hide Tooltips (kept in template for admin toggle) ─── */
+.hero-tooltip {
+    display: none !important;
 }
