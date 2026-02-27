@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Theme implementation to display a node.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if content.field_webform|render|striptags|trim %}
+    {# Custom Split Layout for Contacto or Pages with Forms #}
+    <section class="pg-hero-contact pg-breakout">
+      {# Decorative background layer - extracted from design #}
+      <div class="pg-hero-contact__bg-deco" aria-hidden="true">
+        <img src="data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_6416_620'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='80'%20height='80'%3e%3crect%20width='80'%20height='80'%20fill='%23D9D9D9'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_6416_620)'%3e%3cpath%20d='M36.8437%2052.0506H44.1563C44.7656%2052.0506%2045.2904%2051.7975%2045.7305%2051.2911C46.1706%2050.7848%2046.3229%2050.2278%2046.1875%2049.6203L44.2578%2038.9873C45.612%2038.3122%2046.6784%2037.3333%2047.457%2036.0506C48.2357%2034.7679%2048.625%2033.3502%2048.625%2031.7975C48.625%2029.5696%2047.8294%2027.6624%2046.2383%2026.0759C44.6471%2024.4895%2042.7344%2023.6962%2040.5%2023.6962C38.2656%2023.6962%2036.3529%2024.4895%2034.7617%2026.0759C33.1706%2027.6624%2032.375%2029.5696%2032.375%2031.7975C32.375%2033.3502%2032.7643%2034.7679%2033.543%2036.0506C34.3216%2037.3333%2035.388%2038.3122%2036.7422%2038.9873L34.8125%2049.6203C34.6771%2050.2278%2034.8294%2050.7848%2035.2695%2051.2911C35.7096%2051.7975%2036.2344%2052.0506%2036.8437%2052.0506ZM40.5%2080C40.026%2080%2039.5859%2079.9662%2039.1797%2079.8987C38.7734%2079.8312%2038.3672%2079.73%2037.9609%2079.5949C28.8203%2076.557%2021.5417%2070.9367%2016.125%2062.7342C10.7083%2054.5316%208%2045.7046%208%2036.2532V17.1139C8%2015.4262%208.49089%2013.9072%209.47266%2012.557C10.4544%2011.2068%2011.724%2010.2278%2013.2813%209.62025L37.6563%200.506329C38.6042%200.168776%2039.5521%200%2040.5%200C41.4479%200%2042.3958%200.168776%2043.3437%200.506329L67.7187%209.62025C69.276%2010.2278%2070.5456%2011.2068%2071.5273%2012.557C72.5091%2013.9072%2073%2015.4262%2073%2017.1139V36.2532C73%2045.7046%2070.2917%2054.5316%2064.875%2062.7342C59.4583%2070.9367%2052.1797%2076.557%2043.0391%2079.5949C42.6328%2079.73%2042.2266%2079.8312%2041.8203%2079.8987C41.4141%2079.9662%2040.974%2080%2040.5%2080ZM40.5%2071.8987C47.5417%2069.6709%2053.3646%2065.2152%2057.9688%2058.5316C62.5729%2051.8481%2064.875%2044.4219%2064.875%2036.2532V17.1139L40.5%208L16.125%2017.1139V36.2532C16.125%2044.4219%2018.4271%2051.8481%2023.0313%2058.5316C27.6354%2065.2152%2033.4583%2069.6709%2040.5%2071.8987Z'%20fill='%2322D3EE'/%3e%3c/g%3e%3c/svg%3e" alt="" class="pg-deco-svg pg-deco-svg--1">
+        <img src="data:image/svg+xml,%3csvg%20width='61'%20height='80'%20viewBox='0%200%2061%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M42.8102%2016.8687C37.2278%2011.3034%2031.9188%205.98244%2030.3362%200C28.7823%205.98244%2023.4302%2011.3034%2017.8478%2016.8687C9.4886%2025.224%200.00719428%2034.6866%200.00719428%2048.8949C-0.0807593%2052.9305%200.638511%2056.9431%202.12281%2060.6971C3.6071%2064.4511%205.82653%2067.8711%208.65088%2070.7563C11.4752%2073.6415%2014.8476%2075.9338%2018.5702%2077.4988C22.2928%2079.0639%2026.2905%2079.87%2030.329%2079.87C34.3674%2079.87%2038.3652%2079.0639%2042.0878%2077.4988C45.8104%2075.9338%2049.1828%2073.6415%2052.0071%2070.7563C54.8315%2067.8711%2057.0509%2064.4511%2058.5352%2060.6971C60.0195%2056.9431%2060.7387%2052.9305%2060.6508%2048.8949C60.6508%2034.6866%2051.1694%2025.224%2042.8102%2016.8687Z'%20fill='%2322D3EE'/%3e%3c/svg%3e" alt="" class="pg-deco-svg pg-deco-svg--2">
+        <img src="data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M39.9336%200C61.988%200.000212735%2079.8662%2017.8791%2079.8662%2039.9336C79.8661%2061.988%2061.988%2079.867%2039.9336%2079.8672C17.8791%2079.8672%200.000100621%2061.9881%200%2039.9336C0%2017.879%2017.879%200%2039.9336%200Z'%20fill='%2322D3EE'/%3e%3c/svg%3e" alt="" class="pg-deco-svg pg-deco-svg--3">
+        <div class="pg-deco-circle pg-deco-circle--1"></div>
+        <div class="pg-deco-circle pg-deco-circle--2"></div>
+        <svg class="pg-deco-lines" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgb(59, 130, 246)" stop-opacity="0"></stop>
+              <stop offset="50%" stop-color="rgb(59, 130, 246)" stop-opacity="0.5"></stop>
+              <stop offset="100%" stop-color="rgb(59, 130, 246)" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+          <path d="M 0 100 Q 200 50 400 100 T 800 100" stroke="url(#lineGrad)" stroke-width="2" fill="none"></path>
+          <path d="M 0 300 Q 300 250 600 300 T 1200 300" stroke="url(#lineGrad)" stroke-width="2" fill="none"></path>
+        </svg>
+        <div class="pg-deco-dot pg-deco-dot--1"></div>
+        <div class="pg-deco-dot pg-deco-dot--2"></div>
+        <div class="pg-deco-dot pg-deco-dot--3"></div>
+      </div>
+      <div class="pg-container">
+        <div class="pg-hero-contact__grid">
+          
+          <div class="pg-hero-contact__content">
+            <div class="pg-hero-contact__card">
+              {{ title_prefix }}
+              {% if label and not page %}
+                <h2{{ title_attributes }}>
+                  <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-contact-icon ms-2"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg> 
+                </h2>
+              {% elseif label %}
+                <h1 class="page-title">
+                  {{ label }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="hero-contact-icon"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg> 
+                </h1>
+              {% endif %}
+              {{ title_suffix }}
+              
+              <div class="pg-hero-contact__body">
+                {{ content.body }}
+              </div>
+            </div>
+            
+            {# Render Contact Details Paragraph here #}
+            {% if content.field_components %}
+              <div class="pg-hero-contact__details mt-4">
+                {% for key, child in content.field_components %}
+                  {% if key|first != '#' %}
+                    {% if child['#paragraph'].type.target_id == 'contact_details' %}
+                      {{ child }}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          
+          <div class="pg-hero-contact__form-wrapper">
+             <div class="pg-contact-form-box">
+                {{ content.field_webform }}
+             </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  {% else %}
+    {# Standard Basic Page view #}
+    {% if label and not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {% if label and page and not node.bundle == 'home_page' %}
+       <div class="pg-page-title pb-3 pg-container mt-4">
+          <h1{{ title_attributes }}>{{ label }}</h1>
+       </div>
+    {% endif %}
+    
+    <div{{ content_attributes.addClass('node__content', 'pg-container', 'mb-5') }}>
+      {{ content|without('field_components', 'field_webform') }}
+    </div>
+  {% endif %}
+
+  {# Render additional paragraphs (Brands, Tabs) except contact_details if form is present #}
+  {% if content.field_components %}
+    <div class="pg-components-wrapper">
+      {% if content.field_webform|render|striptags|trim %}
+        {% for key, child in content.field_components %}
+          {% if key|first != '#' %}
+            {% if child['#paragraph'].type.target_id != 'contact_details' %}
+              {{ child }}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {{ content.field_components }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+</article>

@@ -1,0 +1,26 @@
+uuid: 0235fabf-10e7-46fb-b071-4b193fa4cab4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.contact_card
+    - paragraphs.paragraphs_type.contact_details
+  module:
+    - entity_reference_revisions
+id: paragraph.contact_details.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: contact_details
+label: 'Contact Cards'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_card: contact_card
+field_type: entity_reference_revisions

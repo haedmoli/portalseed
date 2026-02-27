@@ -1,0 +1,10 @@
+uuid: b51f61e6-87bc-4f92-9d82-002a7ad0da6e
+langcode: es
+status: true
+dependencies: {  }
+id: services_tabs
+label: 'Services Tabs'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

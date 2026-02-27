@@ -31,6 +31,32 @@
                 if (iconClose) iconClose.style.display = 'none';
             });
         });
+
+        // Custom Tabs Logic for Services (Vanilla JS replacing Bootstrap)
+        var tabButtons = document.querySelectorAll('.pg-services-tab-btn');
+        if (tabButtons.length > 0) {
+            tabButtons.forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('data-bs-target');
+                    if (!targetId) return;
+
+                    var targetPane = document.querySelector(targetId);
+                    if (!targetPane) return;
+
+                    // Remove active from all buttons and panes in same group
+                    var parentWrapper = this.closest('.pg-services-tabs-section');
+                    if (parentWrapper) {
+                        parentWrapper.querySelectorAll('.pg-services-tab-btn').forEach(b => b.classList.remove('active'));
+                        parentWrapper.querySelectorAll('.pg-services-tab-pane').forEach(p => p.classList.remove('active'));
+                    }
+
+                    // Add active to current
+                    this.classList.add('active');
+                    targetPane.classList.add('active');
+                });
+            });
+        }
     });
 
 })();

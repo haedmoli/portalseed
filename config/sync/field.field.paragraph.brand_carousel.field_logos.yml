@@ -1,0 +1,38 @@
+uuid: e247de44-1cc0-4279-a6e0-cc90739d82e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logos
+    - paragraphs.paragraphs_type.brand_carousel
+  module:
+    - image
+id: paragraph.brand_carousel.field_logos
+field_name: field_logos
+entity_type: paragraph
+bundle: brand_carousel
+label: 'Brands Logos'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

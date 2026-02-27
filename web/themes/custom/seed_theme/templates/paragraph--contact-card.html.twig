@@ -1,0 +1,29 @@
+{# paragraph--contact-card.html.twig #}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes, 'pg-contact-card') }}>
+    <div class="pg-contact-card__icon">
+      {# If an icon class is provided, render it. e.g. 'ph-map-pin' #}
+      {% if content.field_icon_class|render|striptags|trim %}
+        <i class="ph {{ content.field_icon_class|render|striptags|trim }}"></i>
+      {% else %}
+        <i class="ph ph-info"></i>
+      {% endif %}
+    </div>
+    <div class="pg-contact-card__content">
+      <h3>{{ content.field_title }}</h3>
+      {% if paragraph.field_link.isEmpty() %}
+        <p>{{ content.field_subtitle }}</p>
+      {% else %}
+        <p><a href="{{ paragraph.field_link.0.url }}" class="pg-contact-card__link" target="_blank">{{ content.field_subtitle }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock paragraph %}

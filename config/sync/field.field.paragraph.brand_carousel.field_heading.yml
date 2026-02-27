@@ -1,0 +1,19 @@
+uuid: 052444ad-9ceb-4ea9-a6bf-2f363ed3e449
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.brand_carousel
+id: paragraph.brand_carousel.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: brand_carousel
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

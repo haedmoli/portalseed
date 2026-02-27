@@ -1,0 +1,23 @@
+{# paragraph--contact-details.html.twig #}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes, 'pg-contact-details-inner') }}>
+    {# Desktop: grid 6-column layout (2 arriba + 3 abajo) #}
+    <div class="pg-contact-cards-grid">
+      {{ content.field_cards }}
+    </div>
+    {# Mobile: horizontal scroll #}
+    <div class="pg-contact-cards-scroll">
+      {{ content.field_cards }}
+    </div>
+  </div>
+{% endblock paragraph %}
+
+
