@@ -1,9 +1,14 @@
 global:
   css:
+    theme:
+      https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css: { type: external }
     base:
       css/variables.css: {}
       css/layout.css: {}
       css/style.css: {}
       css/typography.css: {}
+      css/contact.css: {}
+      css/why-seed.css: {}
+
   js:
     js/script.js: {}

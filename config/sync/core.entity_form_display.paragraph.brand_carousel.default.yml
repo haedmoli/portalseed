@@ -1,0 +1,45 @@
+uuid: 93696881-aec5-45de-9691-cf01adbdbc4a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brand_carousel.field_description
+    - field.field.paragraph.brand_carousel.field_heading
+    - field.field.paragraph.brand_carousel.field_logos
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.brand_carousel
+  module:
+    - image
+    - text
+id: paragraph.brand_carousel.default
+targetEntityType: paragraph
+bundle: brand_carousel
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_logos:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

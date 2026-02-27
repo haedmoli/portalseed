@@ -1,0 +1,23 @@
+uuid: 70ea36cd-3b9a-4e73-b04b-967776177801
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform
+    - node.type.page
+  module:
+    - webform
+id: node.page.field_webform
+field_name: field_webform
+entity_type: node
+bundle: page
+label: 'Contact Form'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings: {  }
+field_type: webform

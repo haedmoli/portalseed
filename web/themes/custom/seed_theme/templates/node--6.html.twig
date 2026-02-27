@@ -1,0 +1,197 @@
+{#
+/**
+ * @file
+ * Template for "Por qué Seed EM" page (node 6).
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {# ================================================================
+     1. HERO SECTION - Dark bg + white card left + bg image right
+     ================================================================ #}
+  <section class="pg-why-hero pg-breakout">
+    <div class="pg-why-hero__bg-image" aria-hidden="true"></div>
+    <div class="pg-container">
+      <div class="pg-why-hero__grid">
+
+        {# Left: white card with title + body #}
+        <div class="pg-why-hero__card">
+          {{ title_prefix }}
+          <h1 class="pg-why-hero__title">
+            Transformamos negocios con soluciones
+            <span class="pg-why-hero__highlight">Drupal</span>
+            de alto desempeño
+          </h1>
+          {{ title_suffix }}
+          <div class="pg-why-hero__body">
+            {{ content.body }}
+          </div>
+        </div>
+
+        {# Right: empty - shows background image through #}
+        <div class="pg-why-hero__image-side"></div>
+      </div>
+    </div>
+  </section>
+
+  {# ================================================================
+     2. CREDENCIALES QUE NOS RESPALDAN
+     ================================================================ #}
+  <section class="pg-credentials pg-breakout">
+    <div class="pg-container">
+      <div class="pg-credentials__header">
+        <h2 class="pg-credentials__title">
+          Credenciales que nos <span>respaldan</span>
+        </h2>
+        <p class="pg-credentials__lead">Experiencia, certificaciones y respaldo tecnológico que garantizan resultados.</p>
+      </div>
+
+      <div class="pg-credentials__grid">
+
+        <div class="pg-credential-card">
+          <div class="pg-credential-card__icon">
+            <i class="ph ph-clock-countdown"></i>
+          </div>
+          <div class="pg-credential-card__body">
+            <h3>+10 años de experiencia</h3>
+            <p>Con un enfoque digital de alto estándar para empresas líderes.</p>
+          </div>
+        </div>
+
+        <div class="pg-credential-card">
+          <div class="pg-credential-card__icon">
+            <i class="ph ph-certificate"></i>
+          </div>
+          <div class="pg-credential-card__body">
+            <h3>Drupal Platinum Certified</h3>
+            <p>Partners en Colombia y referentes en Latinoamérica.</p>
+            <span class="pg-credential-card__badge">Platinum</span>
+          </div>
+        </div>
+
+        <div class="pg-credential-card">
+          <div class="pg-credential-card__icon">
+            <i class="ph ph-users"></i>
+          </div>
+          <div class="pg-credential-card__body">
+            <h3>Asociación Drupal</h3>
+            <p>Contribuidores activos de la Asociación Mundial y Voluntarios de Tu.get Colombia.</p>
+          </div>
+        </div>
+
+        <div class="pg-credential-card">
+          <div class="pg-credential-card__icon">
+            <i class="ph ph-cloud"></i>
+          </div>
+          <div class="pg-credential-card__body">
+            <h3>Infraestructura AWS</h3>
+            <p>Plataformas robustas y escalables sobre Amazon Web Services.</p>
+          </div>
+        </div>
+
+        <div class="pg-credential-card">
+          <div class="pg-credential-card__icon">
+            <i class="ph ph-check-square"></i>
+          </div>
+          <div class="pg-credential-card__body">
+            <h3>Metodologías de calidad</h3>
+            <p>Enfocados en calidad, seguridad, conformes y cumplimiento de plazos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {# ================================================================
+     3. COMPONENTS - Services Tabs first, then Alianzas, then Brands
+     ================================================================ #}
+  {% if content.field_components %}
+    <div class="pg-components-wrapper">
+
+      {# First pass: render services_tabs #}
+      {% for key, child in content.field_components %}
+        {% if key|first != '#' %}
+          {% if child['#paragraph'].type.target_id == 'services_tabs' %}
+            {{ child }}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {# ================================================================
+         4. ALIANZAS Y CERTIFICACIONES (just after services tabs)
+         ================================================================ #}
+      <section class="pg-alliances pg-breakout">
+        <div class="pg-container">
+          <div class="pg-alliances__grid">
+            <div class="pg-alliances__text">
+              <h2>Alianzas y <span>Certificaciones</span></h2>
+              <p>Trabajamos de la mano con las mejores plataformas y comunidades tecnológicas para garantizar soluciones de calidad.</p>
+            </div>
+            <div class="pg-alliances__logos">
+              <div class="pg-alliances__logo-item">
+                <div class="pg-alliances__logo-fallback">
+                  <i class="ph ph-shield-star"></i>
+                  <span>Drupal Association</span>
+                </div>
+              </div>
+              <div class="pg-alliances__logo-item">
+                <div class="pg-alliances__logo-fallback">
+                  <i class="ph ph-cloud"></i>
+                  <span>AWS Partner</span>
+                </div>
+              </div>
+              <div class="pg-alliances__logo-item">
+                <div class="pg-alliances__logo-fallback pg-alliances__logo-fallback--platinum">
+                  <i class="ph ph-star"></i>
+                  <span>Drupal Platinum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {# Second pass: render brand_carousel #}
+      {% for key, child in content.field_components %}
+        {% if key|first != '#' %}
+          {% if child['#paragraph'].type.target_id == 'brand_carousel' %}
+            {{ child }}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  {% endif %}
+
+
+
+  {# ================================================================
+     5. CTA - ¿Listo para transformar tu negocio?
+     ================================================================ #}
+  <section class="pg-why-cta pg-breakout">
+    <div class="pg-container">
+      <div class="pg-why-cta__inner">
+        <h2>¿Listo para transformar tu <span>negocio</span>?</h2>
+        <p>Cuéntanos sobre tu proyecto y descubre cómo podemos ayudarte a alcanzar tus objetivos digitales.</p>
+        <div class="pg-why-cta__actions">
+          <a href="/contacto" class="pg-why-cta__btn pg-why-cta__btn--primary">
+            Hablemos de tu proyecto
+          </a>
+          <a href="/servicios" class="pg-why-cta__btn pg-why-cta__btn--outline">
+            Conoce nuestros servicios
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</article>

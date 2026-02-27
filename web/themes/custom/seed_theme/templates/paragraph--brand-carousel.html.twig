@@ -1,0 +1,42 @@
+{# paragraph--brand-carousel.html.twig #}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes, 'pg-brand-carousel-block') }}>
+    <div class="pg-container-wide">
+      <div class="pg-brand-carousel-grid">
+        <div class="pg-brand-carousel__info">
+          <h2>{{ content.field_heading|render|striptags|replace({'respaldan': '<span class="brand-highlight">respaldan</span>'})|raw }}</h2>
+          <div class="text-muted mt-3">
+            {{ content.field_description }}
+          </div>
+        </div>
+        <div class="pg-brand-carousel__track-parent">
+          {% set logo_items = [] %}
+          {% for key, child in content.field_logos %}
+            {% if key|first != '#' %}
+              {% set logo_items = logo_items|merge([child]) %}
+            {% endif %}
+          {% endfor %}
+          {% set logo_count = logo_items|length %}
+          
+          <div class="pg-brand-carousel__track" style="--logo-count: {{ logo_count > 0 ? logo_count : 1 }};">
+            {% for i in 1..2 %}
+              {% for item in logo_items %}
+                <div class="pg-brand-carousel__slide">
+                  {{ item }}
+                </div>
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

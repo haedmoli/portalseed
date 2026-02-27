@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_components
+    - field.field.node.page.field_webform
     - node.type.page
   module:
+    - entity_reference_revisions
     - text
     - user
+    - webform
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -21,6 +25,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   links:
     weight: 101

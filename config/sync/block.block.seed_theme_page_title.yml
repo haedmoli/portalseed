@@ -23,4 +23,9 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: '<front>'
+    pages: |-
+      <front>
+      /contacto
+      /*/contacto
+      /node/5
+      /*/node/5

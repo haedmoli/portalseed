@@ -1,0 +1,54 @@
+uuid: 67994c71-38e1-4263-9a93-b9ea95a71c7a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_tabs.field_description
+    - field.field.paragraph.services_tabs.field_heading
+    - field.field.paragraph.services_tabs.field_tabs
+    - paragraphs.paragraphs_type.services_tabs
+  module:
+    - paragraphs
+    - text
+id: paragraph.services_tabs.default
+targetEntityType: paragraph
+bundle: services_tabs
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tabs:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Párrafo
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

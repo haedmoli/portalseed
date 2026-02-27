@@ -1,0 +1,59 @@
+{# paragraph--tab-item.html.twig #}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# This template is rendered INSIDE the Services Tabs parent content loop #}
+{# The wrapper loop index is needed to make the first one active. #}
+{# In Drupal paragraphs rendering, loop variables aren't directly available this deep unless passed. 
+   We can just rely on CSS or JS to show the first, OR just check if it's the first child. Let's assume the first is active by default. 
+   A simple approach: use a counter or JS. Let's use JS to activate the first one if Bootstrap requires it, or we handle it in the parent template.
+   Actually, the parent template handles the buttons. This template handles the content panel.
+#}
+
+{% set p_parent = paragraph.getParentEntity() %}
+{% set index = 0 %}
+{% for item in p_parent.field_tabs %}
+  {% if item.target_id == paragraph.id() %}
+     {% set index = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% set unique_id = 'services-tab-grp-' ~ p_parent.id() %}
+{% set panel_id = unique_id ~ '-panel-' ~ index %}
+{% set tab_id = unique_id ~ '-tab-' ~ index %}
+{% set active_class = index == 0 ? 'active' : '' %}
+
+<div class="pg-services-tab-pane {{ active_class }}" id="{{ panel_id }}" role="tabpanel" aria-labelledby="{{ tab_id }}" tabindex="0">
+  <div class="pg-tab-pane-inner p-lg-4 p-3 d-flex flex-column justify-content-center">
+    
+    <div class="mb-4 text-light lead">
+      {{ content.field_description }}
+    </div>
+    
+    {% if content.field_features|render|striptags|trim %}
+      <ul class="list-unstyled pg-tab-features-list mb-4">
+        {% for feature in paragraph.field_features %}
+          <li class="d-flex align-items-center mb-3">
+             <i class="ph ph-check text-info me-3 fs-5"></i>
+             <span class="text-light opacity-75">{{ feature.value }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    {% if not paragraph.field_link.isEmpty() %}
+      <div class="mt-auto">
+        <a href="{{ paragraph.field_link.0.url }}" class="pg-tab-link d-inline-flex align-items-center text-info text-decoration-none pt-3">
+          {{ paragraph.field_link.0.title ?: 'Conoce más' }} <i class="ph ph-caret-right ms-2"></i>
+        </a>
+      </div>
+    {% endif %}
+    
+  </div>
+</div>

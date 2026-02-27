@@ -1,0 +1,59 @@
+{# paragraph--services-tabs.html.twig #}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% 
+  set unique_id = 'services-tab-grp-' ~ paragraph.id() 
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes, 'pg-services-tabs-section', 'pg-breakout') }}>
+    <div class="pg-container">
+      
+      <div class="pg-services-tabs-header">
+        <span class="subtitle">NUESTROS SERVICIOS</span>
+        <h2>Lo que <span>hacemos</span> por ti</h2>
+        <p class="lead">
+          {{ content.field_description }}
+        </p>
+      </div>
+
+      <div class="pg-services-tabs-grid">
+        
+        {# Left column: Tab links #}
+        <div class="pg-services-tab-links" id="{{ unique_id }}-list" role="tablist">
+          {% for key, tab in paragraph.field_tabs %}
+            {% set active_class = loop.first ? 'active' : '' %}
+            {% set aria_selected = loop.first ? 'true' : 'false' %}
+            {% set tab_id = unique_id ~ '-tab-' ~ key %}
+            {% set panel_id = unique_id ~ '-panel-' ~ key %}
+            
+            <button 
+              class="pg-services-tab-btn {{ active_class }}" 
+              id="{{ tab_id }}" 
+              data-bs-target="#{{ panel_id }}" 
+              type="button" 
+              role="tab" 
+              aria-controls="{{ panel_id }}" 
+              aria-selected="{{ aria_selected }}">
+              <i class="ph {{ tab.entity.field_icon_class.value|default('ph-drop') }}"></i>
+              <span>{{ tab.entity.field_title.value|striptags }}</span>
+            </button>
+          {% endfor %}
+        </div>
+        
+        {# Right column: Tab content/panels #}
+        <div class="pg-services-tab-content" id="{{ unique_id }}-content">
+           {{ content.field_tabs }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

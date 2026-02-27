@@ -1,0 +1,62 @@
+uuid: 5bb086ed-63c6-454d-8a6b-20811796bfd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_item.field_description
+    - field.field.paragraph.tab_item.field_features
+    - field.field.paragraph.tab_item.field_icon_class
+    - field.field.paragraph.tab_item.field_link
+    - field.field.paragraph.tab_item.field_title
+    - paragraphs.paragraphs_type.tab_item
+  module:
+    - link
+    - text
+id: paragraph.tab_item.default
+targetEntityType: paragraph
+bundle: tab_item
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_features:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon_class:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
