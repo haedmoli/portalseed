@@ -1,0 +1,22 @@
+uuid: 83728119-aa1f-4fa6-b6b1-b718e763e795
+langcode: es
+status: true
+dependencies:
+  module:
+    - sharethis
+active_version: 2cce2f9b07447732
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: sharethis_block
+        label: Sharethis
+        label_display: '0'
+        provider: sharethis
+    fallback_metadata:
+      slot_definitions: null
+label: Sharethis
+id: block.sharethis_block
+provider: sharethis
+source: block
+source_local_id: sharethis_block

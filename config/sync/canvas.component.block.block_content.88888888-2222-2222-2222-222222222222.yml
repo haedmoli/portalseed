@@ -1,0 +1,25 @@
+uuid: 9e643964-e551-45e5-af5e-63473db119f9
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:88888888-2222-2222-2222-222222222222'
+  module:
+    - block_content
+active_version: ca69a467327e9f90
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:88888888-2222-2222-2222-222222222222'
+        label: 'Footer Contact Info'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Footer Contact Info'
+id: block.block_content.88888888-2222-2222-2222-222222222222
+provider: block_content
+source: block
+source_local_id: 'block_content:88888888-2222-2222-2222-222222222222'

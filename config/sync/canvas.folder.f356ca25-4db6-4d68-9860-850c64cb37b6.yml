@@ -1,0 +1,9 @@
+uuid: f356ca25-4db6-4d68-9860-850c64cb37b6
+langcode: es
+status: true
+dependencies: {  }
+name: ShareThis
+configEntityTypeId: component
+weight: 0
+items:
+  - block.sharethis_block

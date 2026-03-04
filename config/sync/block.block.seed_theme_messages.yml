@@ -11,7 +11,7 @@ _core:
 id: seed_theme_messages
 theme: seed_theme
 region: content
-weight: -10
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

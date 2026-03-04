@@ -1,0 +1,33 @@
+uuid: 1cde178b-36fb-4f2b-ba43-cc7510ed194c
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insight_relacionados
+  module:
+    - node
+    - views
+  theme:
+    - seed_theme
+id: seed_theme_views_block__insight_relacionados_block_1
+theme: seed_theme
+region: sidebar
+weight: -8
+provider: null
+plugin: 'views_block:insight_relacionados-block_1'
+settings:
+  id: 'views_block:insight_relacionados-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: 2
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      insight: insight

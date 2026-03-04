@@ -1,0 +1,11 @@
+uuid: fbf7d70a-dd95-4ad9-b586-4e442977a623
+langcode: es
+status: true
+dependencies: {  }
+name: 'Bloque de contenido'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.block_content.88888888-1111-1111-1111-111111111111
+  - block.block_content.88888888-2222-2222-2222-222222222222
+  - block.block_content.88888888-4444-4444-4444-444444444444
