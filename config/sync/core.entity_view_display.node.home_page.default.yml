@@ -3,15 +3,25 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.home_page.field_canvas_hero
     - field.field.node.home_page.field_components
     - node.type.home_page
   module:
+    - canvas
     - entity_reference_revisions
+    - user
 id: node.home_page.default
 targetEntityType: node
 bundle: home_page
 mode: default
 content:
+  field_canvas_hero:
+    type: canvas_naive_render_sdc_tree
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: -1
+    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden

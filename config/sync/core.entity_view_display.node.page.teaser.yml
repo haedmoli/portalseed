@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_canvas_hero
     - field.field.node.page.field_components
     - field.field.node.page.field_webform
     - node.type.page
@@ -35,6 +36,7 @@ content:
     weight: 10
     region: content
 hidden:
+  field_canvas_hero: true
   field_components: true
   field_webform: true
   langcode: true

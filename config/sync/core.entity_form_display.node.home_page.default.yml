@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.home_page.field_canvas_hero
     - field.field.node.home_page.field_components
     - node.type.home_page
   module:
@@ -81,5 +82,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_canvas_hero: true
   promote: true
   sticky: true

@@ -122,6 +122,13 @@ AddType image/webp .webp
   RewriteCond %{REQUEST_URI} !core
   RewriteRule ^ %1/core/%2 [L,QSA,R=301]
 
+  # Canvas SPA: redirect language-prefixed routes back to /canvas.
+  # Drupal's language URL prefix (/es/, /en/, etc.) conflicts with the Canvas
+  # single-page application which is mounted at /canvas.
+  RewriteCond %{REQUEST_URI} ^/[a-z]{2}/canvas(/.*)?$
+  RewriteRule ^[a-z]{2}(/canvas.*)$ $1 [R=301,L]
+
+
   # Rewrite install.php during installation to see if mod_rewrite is working
   RewriteRule ^core/install\.php core/install.php?rewrite=ok [QSA,L]
 

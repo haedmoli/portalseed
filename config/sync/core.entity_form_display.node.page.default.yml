@@ -1,9 +1,10 @@
 uuid: 5b9a6ca6-51b3-4036-bff6-2b872a684d7a
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_canvas_hero
     - field.field.node.page.field_components
     - field.field.node.page.field_webform
     - node.type.page
@@ -102,5 +103,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_canvas_hero: true
   promote: true
   sticky: true

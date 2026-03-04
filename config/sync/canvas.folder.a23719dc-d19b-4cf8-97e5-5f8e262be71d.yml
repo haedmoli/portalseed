@@ -1,0 +1,9 @@
+uuid: a23719dc-d19b-4cf8-97e5-5f8e262be71d
+langcode: es
+status: true
+dependencies: {  }
+name: Organismos
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.main-hero

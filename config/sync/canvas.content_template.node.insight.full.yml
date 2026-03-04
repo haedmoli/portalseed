@@ -1,0 +1,12 @@
+uuid: de8c73c4-f75d-4139-8462-1d25c38a769b
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+id: node.insight.full
+content_entity_type_id: node
+content_entity_type_bundle: insight
+content_entity_type_view_mode: full
+component_tree: {  }
+exposed_slots: {  }

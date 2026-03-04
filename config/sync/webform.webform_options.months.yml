@@ -1,5 +1,5 @@
 uuid: 7dd2d3df-0880-4e0a-8054-edf3d6e89057
-langcode: en
+langcode: es
 status: true
 dependencies:
   enforced:
@@ -9,7 +9,7 @@ _core:
   default_config_hash: pZJnuQkh9afNML5IcMuKTUC__vmHMFn66Qr5IWtedZ4
 id: months
 label: Months
-category: 'Date and time'
+category: 'Fecha y hora'
 likert: false
 options: |
   January: January

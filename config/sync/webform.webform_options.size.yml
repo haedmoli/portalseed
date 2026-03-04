@@ -1,5 +1,5 @@
 uuid: 7143d714-9562-449b-8e77-92adba13c427
-langcode: en
+langcode: es
 status: true
 dependencies:
   enforced:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: RKkc6tf1VudvYiOtwPCf3Tp_EoA6fov6BFC34D7gMoQ
 id: size
-label: Size
+label: Tamaño
 category: General
 likert: false
 options: |

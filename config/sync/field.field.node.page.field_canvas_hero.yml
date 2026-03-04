@@ -1,0 +1,25 @@
+uuid: b1e2716f-d197-4e43-96fb-cc4f2f72fa19
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_canvas_hero
+    - node.type.page
+  module:
+    - canvas
+third_party_settings:
+  canvas:
+    allowed_components:
+      - sdc.seed_theme.main-hero
+id: node.page.field_canvas_hero
+field_name: field_canvas_hero
+entity_type: node
+bundle: page
+label: 'Hero Principal (Canvas)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: component_tree

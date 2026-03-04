@@ -1,0 +1,25 @@
+uuid: 4a0a9035-e69c-4c64-9460-8343360af177
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:88888888-1111-1111-1111-111111111111'
+  module:
+    - block_content
+active_version: b29c91d09ff85f04
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:88888888-1111-1111-1111-111111111111'
+        label: 'Footer Social Links'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Footer Social Links'
+id: block.block_content.88888888-1111-1111-1111-111111111111
+provider: block_content
+source: block
+source_local_id: 'block_content:88888888-1111-1111-1111-111111111111'

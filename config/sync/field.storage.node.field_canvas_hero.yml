@@ -1,0 +1,19 @@
+uuid: ea70bbf1-a904-45f7-a157-b2cecfc2b811
+langcode: es
+status: true
+dependencies:
+  module:
+    - canvas
+    - node
+id: node.field_canvas_hero
+field_name: field_canvas_hero
+entity_type: node
+type: component_tree
+settings: {  }
+module: canvas
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

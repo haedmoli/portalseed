@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── SDC Components ─────────────────────────────── */
+@import '../../components/main-hero/main-hero.css';

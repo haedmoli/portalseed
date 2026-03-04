@@ -1,5 +1,5 @@
 uuid: a161b507-21b2-4682-8893-d9e166fbe602
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -7,12 +7,13 @@ dependencies:
   module:
     - comment
     - filter
+    - media
     - search
     - system
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
 id: anonymous
-label: 'Anonymous user'
+label: 'Usuario anónimo'
 weight: 0
 is_admin: false
 permissions:
@@ -20,3 +21,4 @@ permissions:
   - 'access content'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'

@@ -9,6 +9,7 @@ global:
       css/typography.css: {}
       css/contact.css: {}
       css/why-seed.css: {}
+      dist/css/styles.css: {}
 
   js:
     js/script.js: {}

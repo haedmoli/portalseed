@@ -1,0 +1,140 @@
+name: 'Main Hero'
+description: 'Hero principal de doble columna con imagen de banner, imagen principal con texto editable y estadísticas.'
+group: 'Organismos'
+props:
+  type: object
+  properties:
+
+    # ── Left Column — Text Content ───────────────────────────
+
+    badge_text:
+      type: string
+      title: 'Etiqueta (Badge)'
+
+    heading:
+      type: string
+      title: 'Título Principal'
+
+    heading_highlight:
+      type: string
+      title: 'Palabras resaltadas en el título'
+
+    description:
+      type: string
+      title: 'Descripción'
+
+    feature_title:
+      type: string
+      title: 'Tarjeta: Título'
+
+    feature_text:
+      type: string
+      title: 'Tarjeta: Descripción'
+
+    feature_tags:
+      type: string
+      title: 'Tarjeta: Tags (separados por coma)'
+
+    cta_primary_text:
+      type: string
+      title: 'Botón 1: Texto'
+
+    cta_primary_url:
+      type: string
+      title: 'Botón 1: URL (ej: /contacto o https://...)'
+
+    cta_secondary_text:
+      type: string
+      title: 'Botón 2: Texto'
+
+    cta_secondary_url:
+      type: string
+      title: 'Botón 2: URL (ej: /servicios o https://...)'
+
+    # ── Stats Row ────────────────────────────────────────────
+
+    stat_1_value:
+      type: string
+      title: 'Stat 1: Valor (ej: 150+)'
+
+    stat_1_label:
+      type: string
+      title: 'Stat 1: Etiqueta'
+
+    stat_2_value:
+      type: string
+      title: 'Stat 2: Valor'
+
+    stat_2_label:
+      type: string
+      title: 'Stat 2: Etiqueta'
+
+    stat_3_value:
+      type: string
+      title: 'Stat 3: Valor'
+
+    stat_3_label:
+      type: string
+      title: 'Stat 3: Etiqueta'
+
+    # ── Right Column — Banner Image (sube o selecciona imagen) ───
+
+    banner_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Banner: Imagen (logos/insignias)'
+
+    banner_image_alt:
+      type: string
+      title: 'Banner: Alt text'
+
+    banner_link_url:
+      type: string
+      title: 'Banner: Enlace (opcional)'
+
+    # ── Right Column — Main Image (sube o selecciona imagen) ────
+
+    image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Imagen principal'
+
+    image_alt:
+      type: string
+      title: 'Imagen principal: Alt text'
+
+    image_link_url:
+      type: string
+      title: 'Imagen principal: Enlace (opcional)'
+
+    image_overlay_text:
+      type: string
+      title: 'Imagen principal: Texto superpuesto'
+
+    # ── Floating tooltips ────────────────────────────────────
+
+    tooltip_1_text:
+      type: string
+      title: 'Tooltip izquierda (ej: Drupal Certified)'
+
+    tooltip_2_label:
+      type: string
+      title: 'Tooltip derecha: Label (ej: 24/7)'
+
+    tooltip_2_sub:
+      type: string
+      title: 'Tooltip derecha: Sub-texto (ej: Soporte)'
+
+    tooltip_3_label:
+      type: string
+      title: 'Tooltip inferior: Label (ej: SeedCloud)'
+
+    tooltip_3_sub:
+      type: string
+      title: 'Tooltip inferior: Sub-texto (ej: Hosting Drupal)'
