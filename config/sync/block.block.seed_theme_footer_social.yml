@@ -11,7 +11,7 @@ dependencies:
 id: seed_theme_footer_social
 theme: seed_theme
 region: footer_first
-weight: 0
+weight: -8
 provider: null
 plugin: 'block_content:88888888-1111-1111-1111-111111111111'
 settings:

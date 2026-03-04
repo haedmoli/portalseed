@@ -1,0 +1,10 @@
+uuid: 98e84692-ff21-4676-aac6-f5abdc766fac
+langcode: es
+status: true
+dependencies: {  }
+name: Formularios
+configEntityTypeId: component
+weight: 0
+items:
+  - block.search_form_block
+  - block.user_login_block

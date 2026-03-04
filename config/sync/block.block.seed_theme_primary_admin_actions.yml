@@ -9,7 +9,7 @@ _core:
 id: seed_theme_primary_admin_actions
 theme: seed_theme
 region: content
-weight: -18
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:
