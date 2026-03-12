@@ -1,0 +1,10 @@
+# Canvas Architecture Configuration
+# This file dictates the technology stack and rules used by the Assistant to build Canvas components.
+
+# Valid options:
+# - "twig": Generates Drupal Single Directory Components (SDCs) using Twig, CSS, and component.yml.
+#           Strictly follows the rules in `.agent/skills/Manifesto-librería-canvas.md`.
+# - "react": Generates React components (.jsx) matching the official Canvas ecosystem.
+#            Strictly follows the rules in `.agent/skills/external/canvas-react-skills/`.
+
+canvas_stack: "twig"

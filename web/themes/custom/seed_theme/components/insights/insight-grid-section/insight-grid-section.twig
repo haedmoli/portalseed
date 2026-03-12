@@ -1,0 +1,21 @@
+{# insight-grid-section.twig #}
+<section {{ attributes.addClass('py-8 lg:py-12 mb-12 lg:mb-16', bg_gray ? 'bg-seed-gray-100 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen' : 'bg-white') }}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Section Header #}
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-seed-blue-950">
+        {{ title }}
+      </h2>
+      {% if view_all_text and view_all_url %}
+        <a href="{{ view_all_url }}" class="text-seed-blue-600 font-medium hover:underline text-sm sm:text-base">
+          {{ view_all_text }} →
+        </a>
+      {% endif %}
+    </div>
+
+    {# Grid Slot #}
+    <div class="grid-container">
+      {% block grid_slot %}{% endblock %}
+    </div>
+  </div>
+</section>

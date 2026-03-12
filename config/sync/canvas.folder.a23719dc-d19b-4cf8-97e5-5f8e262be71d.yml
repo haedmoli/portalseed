@@ -6,4 +6,8 @@ name: Organismos
 configEntityTypeId: component
 weight: 0
 items:
+  - sdc.seed_theme.footer-contact
+  - sdc.seed_theme.insight-detail
   - sdc.seed_theme.main-hero
+  - sdc.seed_theme.services-grid
+  - sdc.seed_theme.success-stories

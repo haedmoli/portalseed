@@ -1,0 +1,22 @@
+uuid: 6c2d7c42-1e15-4baa-bdfd-8c64c33ae5d9
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seed_theme
+active_version: bbb9db66563c71fe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        featured:
+          title: 'Artículo Destacado (Grande)'
+        recent_list:
+          title: 'Lista de Artículos Recientes'
+label: 'Insight Recent Layout'
+id: sdc.seed_theme.insight-recent-layout
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:insight-recent-layout'

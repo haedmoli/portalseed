@@ -1,0 +1,133 @@
+/* Footer Contact Styles */
+
+.footer-contact {
+  font-family: 'Outfit', sans-serif;
+  background-color: #ffffff;
+}
+
+.footer-contact h2 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.footer-contact h2 span {
+  color: #0078d3;
+}
+
+.footer-contact p {
+  color: #64748b;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.info-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+}
+
+.info-text .label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+}
+
+.info-text .value {
+  font-weight: 800;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.info-text .value:hover {
+  color: #0078d3;
+}
+
+.guarantee-box {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.guarantee-icon {
+  width: 3rem;
+  height: 3rem;
+  background: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.form-container {
+  background: #f8fafc;
+  border-radius: 2.5rem;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.form-container h3 {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Webform overrides */
+.footer-contact .form-item label {
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.footer-contact input, 
+.footer-contact textarea {
+  border-radius: 0.75rem !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.75rem 1rem !important;
+  background: #ffffff !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.footer-contact input:focus, 
+.footer-contact textarea:focus {
+  border-color: #0078d3 !important;
+  outline: none !important;
+}
+
+.footer-contact .form-submit {
+  background: #0078d3 !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  padding: 1rem 2rem !important;
+  font-weight: 800 !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.footer-contact .form-submit:hover {
+  background: #0f172a !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2) !important;
+}

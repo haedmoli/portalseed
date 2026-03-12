@@ -1,0 +1,26 @@
+uuid: 4ba61568-89eb-4af3-a6ae-295518e011a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insight_relacionados
+  module:
+    - views
+active_version: e65c386553a48603
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:insight_relacionados-block_2'
+        label: 'Insight Relacionados: De interés'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Insight Relacionados: De interés'
+id: block.views_block.insight_relacionados-block_2
+provider: views
+source: block
+source_local_id: 'views_block:insight_relacionados-block_2'

@@ -1,0 +1,34 @@
+name: Insight Hero
+description: 'Sección Hero para la landing de Blog con efecto typewriter y diseño oscuro.'
+category: Insights
+props:
+  type: object
+  properties:
+    title_prefix:
+      type: string
+      title: 'Título: Prefijo'
+      default: 'Insights: '
+    title_highlight:
+      type: string
+      title: 'Título: Resaltado'
+      default: 'expertos en Drupal'
+    description:
+      type: string
+      title: 'Descripción (efecto typewriter)'
+      default: 'Descubre las últimas tendencias, mejores prácticas y casos de éxito en desarrollo web, Drupal y tecnologías emergentes.'
+    bg_image_url:
+      type: string
+      title: 'URL: Imagen de Fondo (Textura)'
+      default: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80'
+    hero_image:
+      type: string
+      title: 'Imagen Principal'
+      default: ''
+    counter_value:
+      type: string
+      title: 'Contador: Valor'
+      default: '+100'
+    counter_label:
+      type: string
+      title: 'Contador: Etiqueta'
+      default: 'Insights publicados'

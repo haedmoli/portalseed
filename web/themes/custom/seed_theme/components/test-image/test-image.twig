@@ -1,0 +1,8 @@
+<div class="test-image-output p-4 bg-gray-100">
+  <h3>Raw Input:</h3>
+  <pre>{{ test_img|json_encode(constant('JSON_PRETTY_PRINT')) }}</pre>
+  <h3>Direct Output:</h3>
+  <p>{{ test_img }}</p>
+  <h3>Img Tag Output:</h3>
+  <img src="{{ test_img }}" style="max-width: 200px" />
+</div>

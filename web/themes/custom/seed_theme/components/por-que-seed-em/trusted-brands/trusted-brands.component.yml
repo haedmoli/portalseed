@@ -1,0 +1,83 @@
+name: 'Trusted Brands'
+description: 'Carrusel infinito de logos de clientes o marcas.'
+group: 'Por qué Seed EM'
+props:
+  type: object
+  properties:
+    section_title_regular:
+      type: string
+      title: 'Título Regular'
+    section_title_highlight:
+      type: string
+      title: 'Título Resaltado'
+    section_description:
+      type: string
+      title: 'Descripción'
+    
+    test_field_sync:
+      type: string
+      title: 'TEST FIELD SYNC'
+    
+    logo_1:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 1'
+    logo_2:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 2'
+    logo_3:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 3'
+    logo_4:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 4'
+    logo_5:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 5'
+    logo_6:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 6'
+    logo_7:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 7'
+    logo_8:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Logo 8'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      trusted-brands.css: {}

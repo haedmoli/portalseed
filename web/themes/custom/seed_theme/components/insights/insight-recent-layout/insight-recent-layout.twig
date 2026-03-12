@@ -1,0 +1,19 @@
+{# insight-recent-layout.twig #}
+<section {{ attributes.addClass('mb-12 lg:mb-16') }}>
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 min-h-[400px]">
+    {# Featured Article Slot #}
+    <div class="lg:col-span-3 flex">
+      {% block featured %}{% endblock %}
+    </div>
+
+    {# Recent List Slot #}
+    <div class="lg:col-span-2 flex flex-col">
+      <h3 class="text-lg font-bold text-seed-blue-950 mb-4 pb-2 border-b-2 border-seed-gray-200">
+        Insights recientes
+      </h3>
+      <div class="flex-1 flex flex-col h-full">
+        {% block recent_list %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</section>

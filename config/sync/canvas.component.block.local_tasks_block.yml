@@ -20,3 +20,4 @@ id: block.local_tasks_block
 provider: core
 source: block
 source_local_id: local_tasks_block
+weight: 0

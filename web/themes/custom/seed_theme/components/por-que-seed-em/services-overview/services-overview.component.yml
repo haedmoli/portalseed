@@ -1,0 +1,81 @@
+name: 'Services Overview'
+description: 'Vista de servicios en acordeón (móvil) y pestañas laterales (desktop).'
+group: 'Por qué Seed EM'
+props:
+  type: object
+  properties:
+    section_label:
+      type: string
+      title: 'Etiqueta superior (ej: Nuestros Servicios)'
+    section_title:
+      type: string
+      title: 'Título principal'
+    section_title_highlight:
+      type: string
+      title: 'Palabra resaltada del título'
+    section_description:
+      type: string
+      title: 'Descripción de la sección'
+    
+    # Servicio 1
+    s1_title:
+      type: string
+      title: 'S1: Título'
+    s1_desc:
+      type: string
+      title: 'S1: Descripción'
+    s1_features:
+      type: string
+      title: 'S1: Features (CSV)'
+    s1_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S1: Icono'
+
+    # Servicio 2
+    s2_title:
+      type: string
+      title: 'S2: Título'
+    s2_desc:
+      type: string
+      title: 'S2: Descripción'
+    s2_features:
+      type: string
+      title: 'S2: Features (CSV)'
+    s2_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S2: Icono'
+
+    # Servicio 3
+    s3_title:
+      type: string
+      title: 'S3: Título'
+    s3_desc:
+      type: string
+      title: 'S3: Descripción'
+    s3_features:
+      type: string
+      title: 'S3: Features (CSV)'
+    s3_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S3: Icono'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      services-overview.css: {}
+  js:
+    services-overview.js: { defer: true, attributes: { type: module } }

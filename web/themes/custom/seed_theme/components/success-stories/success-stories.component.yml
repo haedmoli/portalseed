@@ -1,0 +1,112 @@
+name: 'Success Stories'
+description: 'Sección de casos de éxito con tarjetas que incluyen imágenes tipo mockup, descripción y tags.'
+group: 'Organismos'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Título de la Sección'
+      default: 'Casos de'
+    section_title_highlight:
+      type: string
+      title: 'Palabra resaltada del título'
+      default: 'éxito'
+    section_description:
+      type: string
+      title: 'Descripción de la sección'
+      default: 'Conoce cómo hemos transformado digitalmente organizaciones de diferentes sectores.'
+    
+    # Case 1
+    c1_title:
+      type: string
+      title: 'C1: Título'
+      default: 'Grupo Éxito'
+    c1_desc:
+      type: string
+      title: 'C1: Descripción'
+      default: 'Rediseño y optimización del ecosistema digital para mejorar la experiencia de usuario.'
+    c1_tags:
+      type: string
+      title: 'C1: Tags (CSV)'
+      default: 'Retail, Drupal 10, Performance'
+    c1_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'C1: Imagen'
+    c1_url:
+      type: string
+      title: 'C1: URL'
+      default: '#'
+    c1_color:
+      type: string
+      title: 'C1: Color Accent (ej: #00C2FF)'
+      default: '#00C2FF'
+
+    # Case 2
+    c2_title:
+      type: string
+      title: 'C2: Título'
+      default: 'Élite'
+    c2_desc:
+      type: string
+      title: 'C2: Descripción'
+      default: 'Plataforma educativa con alta concurrencia y gestión masiva de datos.'
+    c2_tags:
+      type: string
+      title: 'C2: Tags (CSV)'
+      default: 'Educación, LMS, Integración'
+    c2_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'C2: Imagen'
+    c2_url:
+      type: string
+      title: 'C2: URL'
+      default: '#'
+    c2_color:
+      type: string
+      title: 'C2: Color Accent'
+      default: '#F59E0B'
+
+    # Case 3
+    c3_title:
+      type: string
+      title: 'C3: Título'
+      default: 'Librería Carlos Fuentes'
+    c3_desc:
+      type: string
+      title: 'C3: Descripción'
+      default: 'E-commerce especializado con búsqueda avanzada y catálogo extenso.'
+    c3_tags:
+      type: string
+      title: 'C3: Tags (CSV)'
+      default: 'E-commerce, Solr, UX'
+    c3_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'C3: Imagen'
+    c3_url:
+      type: string
+      title: 'C3: URL'
+      default: '#'
+    c3_color:
+      type: string
+      title: 'C3: Color Accent'
+      default: '#EF4444'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      success-stories.css: {}

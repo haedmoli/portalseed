@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * three-columns.twig
+ */
+#}
+<div{{ attributes.addClass('layout-three-columns', 'container', 'mx-auto', 'px-4', 'my-8') }}>
+  <div class="flex flex-col md:flex-row gap-6 lg:gap-8">
+    
+    {# Columna 1 #}
+    {% set col_1_classes = 'w-full' %}
+    {% if layout_type == '25-50-25' %}
+      {% set col_1_classes = col_1_classes ~ ' md:w-1/4' %}
+    {% else %}
+      {# 33-33-33 default #}
+      {% set col_1_classes = col_1_classes ~ ' md:w-1/3' %}
+    {% endif %}
+    
+    <div class="layout-col-1 {{ col_1_classes }}">
+      {% block col_1 %}
+        <div class="p-4 bg-gray-50 border border-dashed border-gray-300 text-center text-gray-500 rounded h-full min-h-[150px]">
+          Columna 1
+        </div>
+      {% endblock %}
+    </div>
+
+    {# Columna 2 #}
+    {% set col_2_classes = 'w-full' %}
+    {% if layout_type == '25-50-25' %}
+      {% set col_2_classes = col_2_classes ~ ' md:w-1/2' %}
+    {% else %}
+      {# 33-33-33 default #}
+      {% set col_2_classes = col_2_classes ~ ' md:w-1/3' %}
+    {% endif %}
+    
+    <div class="layout-col-2 {{ col_2_classes }}">
+      {% block col_2 %}
+        <div class="p-4 bg-gray-50 border border-dashed border-gray-300 text-center text-gray-500 rounded h-full min-h-[150px]">
+          Columna 2
+        </div>
+      {% endblock %}
+    </div>
+
+    {# Columna 3 #}
+    {% set col_3_classes = 'w-full' %}
+    {% if layout_type == '25-50-25' %}
+      {% set col_3_classes = col_3_classes ~ ' md:w-1/4' %}
+    {% else %}
+      {# 33-33-33 default #}
+      {% set col_3_classes = col_3_classes ~ ' md:w-1/3' %}
+    {% endif %}
+    
+    <div class="layout-col-3 {{ col_3_classes }}">
+      {% block col_3 %}
+        <div class="p-4 bg-gray-50 border border-dashed border-gray-300 text-center text-gray-500 rounded h-full min-h-[150px]">
+          Columna 3
+        </div>
+      {% endblock %}
+    </div>
+
+  </div>
+</div>

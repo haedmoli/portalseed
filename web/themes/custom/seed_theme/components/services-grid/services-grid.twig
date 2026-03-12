@@ -1,0 +1,71 @@
+{{ attach_library('seed_theme/services-grid') }}
+
+<section class="services-grid py-16 md:py-24 bg-white overflow-hidden">
+  <div class="container-custom mx-auto px-4 md:px-8">
+    
+    {# Header Section #}
+    <div class="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-[#0F172A] mb-6 leading-tight">
+        {{ section_title }} <span class="text-[#00C2FF]">{{ section_title_highlight }}</span> tu negocio
+      </h2>
+      <p class="text-[15px] md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        {{ section_description }}
+      </p>
+    </div>
+
+    {# Grid #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      {# Service Card Macro/Template shortcut #}
+      {% for i in 1..3 %}
+        {% set title = attribute(_context, 's' ~ i ~ '_title') %}
+        {% set desc = attribute(_context, 's' ~ i ~ '_desc') %}
+        {% set features = attribute(_context, 's' ~ i ~ '_features')|split(',') %}
+        {% set icon = attribute(_context, 's' ~ i ~ '_icon') %}
+        {% set url = attribute(_context, 's' ~ i ~ '_url') %}
+
+        <article class="service-card group animate-slide-up" style="animation-delay: {{ i * 100 }}ms">
+          
+          {# Icon Container #}
+          <div class="icon-wrapper">
+            {% if icon %}
+              <img src="{{ file_url(icon) }}" alt="{{ title }}" class="w-10 h-10 object-contain" />
+            {% else %}
+              {# Default Icons #}
+              {% if i == 1 %}
+                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6m4-12v16"/></svg>
+              {% elseif i == 2 %}
+                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              {% else %}
+                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+              {% endif %}
+            {% endif %}
+          </div>
+
+          {# Card Content #}
+          <h3>{{ title }}</h3>
+          <p class="mb-8 flex-grow">{{ desc }}</p>
+
+          {# Features List #}
+          <ul class="space-y-3 mb-10">
+            {% for item in features %}
+              <li>
+                <span></span>
+                {{ item|trim }}
+              </li>
+            {% endfor %}
+          </ul>
+
+          {# Link #}
+          <div class="mt-auto">
+            <a href="{{ url }}" class="btn-more">
+              Saber más 
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

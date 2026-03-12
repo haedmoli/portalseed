@@ -18,3 +18,4 @@ id: block.page_title_block
 provider: core
 source: block
 source_local_id: page_title_block
+weight: 0

@@ -20,3 +20,4 @@ id: block.shortcuts
 provider: shortcut
 source: block
 source_local_id: shortcuts
+weight: 0

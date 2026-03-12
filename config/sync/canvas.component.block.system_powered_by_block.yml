@@ -20,3 +20,4 @@ id: block.system_powered_by_block
 provider: system
 source: block
 source_local_id: system_powered_by_block
+weight: 0

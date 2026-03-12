@@ -1,0 +1,28 @@
+{{ attach_library('seed_theme/cta-banner') }}
+
+<div class="cta-banner py-4 md:py-6">
+  <div class="container-custom mx-auto px-4">
+    <div class="banner-container flex flex-wrap items-center justify-between group">
+      
+      {# Background Glow #}
+      <div class="glow"></div>
+      
+      {# Text #}
+      <div class="flex items-center gap-4 py-3 relative z-10">
+        <div class="hidden md:flex w-12 h-12 rounded-full bg-white/20 items-center justify-center text-white shrink-0">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+        </div>
+        <h3 class="text-lg md:text-xl lg:text-2xl">
+          {{ text }}
+        </h3>
+      </div>
+
+      {# Button area #}
+      <a href="{{ button_url }}" class="btn-cta relative z-10">
+        <span>{{ button_label_prefix }} <span class="underline decoration-2 underline-offset-4">{{ button_label_highlight }}</span></span>
+        <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+    </div>
+  </div>
+</div>

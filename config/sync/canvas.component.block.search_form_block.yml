@@ -21,3 +21,4 @@ id: block.search_form_block
 provider: search
 source: block
 source_local_id: search_form_block
+weight: 0

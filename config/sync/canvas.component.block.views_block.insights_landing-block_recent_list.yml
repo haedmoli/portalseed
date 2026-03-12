@@ -1,0 +1,26 @@
+uuid: 6525b32f-8763-4c94-9eb8-837164f2383d
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insights_landing
+  module:
+    - views
+active_version: 7b42fa0f087f1033
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:insights_landing-block_recent_list'
+        label: 'Insights Landing: Recent List'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Insights Landing: Recent List'
+id: block.views_block.insights_landing-block_recent_list
+provider: views
+source: block
+source_local_id: 'views_block:insights_landing-block_recent_list'

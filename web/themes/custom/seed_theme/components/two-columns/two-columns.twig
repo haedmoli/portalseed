@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * two-columns.twig
+ */
+#}
+<div{{ attributes.addClass('layout-two-columns', 'container', 'mx-auto', 'px-4', 'my-8') }}>
+  <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+    
+    {# Columna Principal #}
+    {% set main_classes = 'w-full' %}
+    {% if layout_type == '80-20' %}
+      {% set main_classes = main_classes ~ ' md:w-4/5' %}
+    {% elseif layout_type == '70-30' %}
+      {% set main_classes = main_classes ~ ' md:w-8/12 lg:w-3/4' %}
+    {% elseif layout_type == '60-40' %}
+      {% set main_classes = main_classes ~ ' md:w-7/12 lg:w-3/5' %}
+    {% elseif layout_type == '50-50' %}
+      {% set main_classes = main_classes ~ ' md:w-1/2' %}
+    {% else %}
+      {% set main_classes = main_classes ~ ' md:w-8/12 lg:w-3/4' %}
+    {% endif %}
+    
+    <div class="layout-main-content {{ main_classes }}">
+      {% block main_content %}
+        <div class="p-4 bg-gray-50 border border-dashed border-gray-300 text-center text-gray-500 rounded">
+          Arrastra tu componente principal aquí (ej: Insight Detail)
+        </div>
+      {% endblock %}
+    </div>
+
+    {# Barra Lateral #}
+    {% set sidebar_classes = 'w-full' %}
+    {% if layout_type == '80-20' %}
+      {% set sidebar_classes = sidebar_classes ~ ' md:w-1/5' %}
+    {% elseif layout_type == '70-30' %}
+      {% set sidebar_classes = sidebar_classes ~ ' md:w-4/12 lg:w-1/4' %}
+    {% elseif layout_type == '60-40' %}
+      {% set sidebar_classes = sidebar_classes ~ ' md:w-5/12 lg:w-2/5' %}
+    {% elseif layout_type == '50-50' %}
+      {% set sidebar_classes = sidebar_classes ~ ' md:w-1/2' %}
+    {% else %}
+      {% set sidebar_classes = sidebar_classes ~ ' md:w-4/12 lg:w-1/4' %}
+    {% endif %}
+
+    <div class="layout-sidebar {{ sidebar_classes }}">
+      {% block sidebar %}
+        <div class="p-4 bg-gray-50 border border-dashed border-gray-300 text-center text-gray-500 rounded h-full min-h-[200px]">
+          Arrastra tus componentes de barra lateral aquí (ej: ShareThis, Relacionados)
+        </div>
+      {% endblock %}
+    </div>
+
+  </div>
+</div>

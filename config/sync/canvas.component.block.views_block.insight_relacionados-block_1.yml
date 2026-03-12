@@ -1,0 +1,37 @@
+uuid: 39b52285-6fef-4373-99af-0fef86beb0c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insight_relacionados
+  module:
+    - views
+active_version: e5444016e07b6d85
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:insight_relacionados-block_1'
+        label: 'Insight Relacionados: Relacionados'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+  208f03fbc2c5c48f:
+    settings:
+      default_settings:
+        id: 'views_block:insight_relacionados-block_1'
+        label: 'Insight Relacionados: Relacionados'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Insight Relacionados: Relacionados'
+id: block.views_block.insight_relacionados-block_1
+provider: views
+source: block
+source_local_id: 'views_block:insight_relacionados-block_1'

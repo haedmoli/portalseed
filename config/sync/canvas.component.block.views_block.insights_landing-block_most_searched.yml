@@ -1,0 +1,26 @@
+uuid: 5e986154-a482-45aa-8c45-c2684a2f6ea3
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insights_landing
+  module:
+    - views
+active_version: 8f11bc0307af4d54
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:insights_landing-block_most_searched'
+        label: 'Insights Landing: Most Searched'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Insights Landing: Most Searched'
+id: block.views_block.insights_landing-block_most_searched
+provider: views
+source: block
+source_local_id: 'views_block:insights_landing-block_most_searched'

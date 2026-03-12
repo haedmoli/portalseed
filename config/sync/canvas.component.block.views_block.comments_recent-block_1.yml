@@ -24,3 +24,4 @@ id: block.views_block.comments_recent-block_1
 provider: views
 source: block
 source_local_id: 'views_block:comments_recent-block_1'
+weight: 0

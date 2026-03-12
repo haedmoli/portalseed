@@ -1,0 +1,32 @@
+{{ attach_library('seed_theme/about-cta') }}
+
+<section class="py-16 md:py-24 bg-seed-gray-900 relative overflow-hidden">
+  {# Background decorative elements #}
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-20 -right-20 w-80 h-80 border-2 border-cyan-400/10 rounded-full"></div>
+    <div class="absolute -bottom-16 -left-16 w-64 h-64 border-2 border-seed-blue-400/10 rounded-full"></div>
+    <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-seed-blue-400 rounded-full animate-pulse delay-150"></div>
+  </div>
+
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading font-bold text-white mb-4 text-3xl md:text-4xl">
+        {{ section_title|default('¿Listo para transformar tu') }}
+        <span class="text-cyan-400">{{ section_title_highlight|default('negocio') }}</span>?
+      </h2>
+      <p class="text-seed-gray-300 text-[14px] md:text-lg mb-8 max-w-xl mx-auto">
+        {{ section_description|default('Cuéntanos sobre tu proyecto y descubre cómo podemos ayudarte a alcanzar tus objetivos digitales.') }}
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="{{ primary_button_url|default('/contacto') }}" class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-seed-gray-900 font-bold rounded-lg hover:bg-cyan-300 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-400/25 text-base md:text-lg min-w-[200px]">
+          {{ primary_button_text|default('Hablemos de tu proyecto') }}
+        </a>
+        <a href="{{ secondary_button_url|default('/servicios') }}" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-base md:text-lg min-w-[200px]">
+          {{ secondary_button_text|default('Conoce nuestros servicios') }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

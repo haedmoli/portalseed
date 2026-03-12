@@ -1,0 +1,13 @@
+name: 'Test Image Output'
+description: 'Temporary component to test image URI output.'
+group: 'Test'
+props:
+  type: object
+  properties:
+    test_img:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Upload Test Image'

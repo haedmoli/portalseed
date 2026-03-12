@@ -9,7 +9,7 @@ _core:
 id: seed_theme_primary_local_tasks
 theme: seed_theme
 region: content
-weight: -9
+weight: -20
 provider: null
 plugin: local_tasks_block
 settings:

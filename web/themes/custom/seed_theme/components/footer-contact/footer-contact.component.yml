@@ -1,0 +1,45 @@
+name: 'Footer Contact'
+description: 'Sección de contacto del pie de página con información a la izquierda y formulario a la derecha.'
+group: 'Organismos'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Título'
+      default: '¿Listo para transformar tu proyecto?'
+    heading_highlight:
+      type: string
+      title: 'Palabra resaltada'
+      default: 'transformar'
+    description:
+      type: string
+      title: 'Descripción'
+      default: 'Conversemos sobre cómo podemos impulsar tu transformación digital. Nuestro equipo está aquí para ayudarte.'
+    email:
+      type: string
+      title: 'Email'
+      default: 'info@seedem.co'
+    phone:
+      type: string
+      title: 'Teléfono'
+      default: '+57 311 860 81 52'
+    guarantee_text:
+      type: string
+      title: 'Texto de garantía'
+      default: 'Respuesta garantizada'
+    guarantee_sub:
+      type: string
+      title: 'Subtexto garantía'
+      default: 'Te contactaremos en < 24 horas para dar el siguiente paso.'
+slots:
+  form_slot:
+    title: 'Área del Formulario'
+    description: 'Arrastra un bloque de Webform aquí.'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      footer-contact.css: {}

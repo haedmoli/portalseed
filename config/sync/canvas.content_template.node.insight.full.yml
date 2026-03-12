@@ -1,12 +1,47 @@
-uuid: de8c73c4-f75d-4139-8462-1d25c38a769b
+uuid: 0c524141-c654-44cc-8f10-151582652b9c
 langcode: es
-status: false
+status: true
 dependencies:
   config:
+    - canvas.component.block.views_block.insight_relacionados-block_1
+    - canvas.component.block.views_block.insight_relacionados-block_2
+    - canvas.component.sdc.seed_theme.insight-detail
+    - canvas.component.sdc.seed_theme.two-columns
     - core.entity_view_mode.node.full
+    - field.field.node.insight.body
+    - node.type.insight
+  module:
+    - node
+    - options
 id: node.insight.full
 content_entity_type_id: node
 content_entity_type_bundle: insight
 content_entity_type_view_mode: full
-component_tree: {  }
+component_tree:
+  0:
+    uuid: d3bbbc36-87a1-4063-9e7d-57668504e61c
+    component_id: sdc.seed_theme.two-columns
+    component_version: e54ec1b8ff219bca
+    inputs: '{"layout_type":"70-30"}'
+  '0:main_content:0':
+    parent_uuid: d3bbbc36-87a1-4063-9e7d-57668504e61c
+    slot: main_content
+    uuid: 42fb169d-7b76-4e07-ad9c-4d5164b6b0bb
+    component_id: sdc.seed_theme.insight-detail
+    component_version: 2279571ec99ec44e
+    inputs: '{"title":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:insight\u241dtitle\u241e\u241fvalue"},"content":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:insight\u241dbody\u241e\u241fprocessed"},"banner_image_alt":"test","publish_date":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node\u241dcreated\u241e\u241fvalue","adapter":"unix_to_date"}}'
+  '0:main_content:1':
+    parent_uuid: d3bbbc36-87a1-4063-9e7d-57668504e61c
+    slot: main_content
+    uuid: 8491c6bb-0c4a-4764-b1fa-93ff7de6cd1c
+    component_id: block.views_block.insight_relacionados-block_2
+    component_version: e65c386553a48603
+    inputs: '{"label":"Insight Relacionados: De inter\u00e9s","label_display":"0","views_label":"","items_per_page":null}'
+  '0:sidebar:0':
+    parent_uuid: d3bbbc36-87a1-4063-9e7d-57668504e61c
+    slot: sidebar
+    uuid: 61c6bd6b-1673-401d-9c23-d57964561a5e
+    component_id: block.views_block.insight_relacionados-block_1
+    component_version: 208f03fbc2c5c48f
+    inputs: '{"label":"Insight Relacionados: Block","label_display":"0","views_label":"Insight Relacionados","items_per_page":3}'
 exposed_slots: {  }

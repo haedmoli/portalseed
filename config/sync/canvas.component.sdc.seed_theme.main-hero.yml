@@ -1491,3 +1491,4 @@ id: sdc.seed_theme.main-hero
 provider: seed_theme
 source: sdc
 source_local_id: 'seed_theme:main-hero'
+weight: 0

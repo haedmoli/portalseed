@@ -1,0 +1,106 @@
+{# node--insight.html.twig #}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{# 
+  IMPORTANTE: Solo aplicamos el markup personalizado para los modos de vista del Blog.
+  El modo 'full' (usado por Canvas para el template) debe permanecer intacto 
+  para no romper los estilos y controles de Canvas.
+#}
+
+{% if view_mode == 'teaser_featured' %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="group cursor-pointer relative overflow-hidden rounded-2xl bg-seed-blue-950 flex flex-col w-full h-full min-h-[400px]">
+      <div class="relative flex-1 min-h-[250px] overflow-hidden">
+        {% if content.field_image %}
+          {{ content.field_image }}
+        {% endif %}
+        <div class="absolute inset-0 bg-gradient-to-t from-seed-blue-950/80 to-transparent"></div>
+      </div>
+      <div class="p-6 lg:p-8 relative z-10 -mt-20">
+        <div class="flex items-center gap-4 text-sm text-white/60 mb-3">
+          <span class="font-medium text-cyan-400/80">{{ content.field_article_category }}</span>
+          <span>{{ node.getCreatedTime()|date('d/m/y') }}</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+        <div class="text-white/80 mb-4 line-clamp-2 leading-relaxed">
+          {{ content.body|render|striptags|truncate(160) }}
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% elseif view_mode == 'teaser_list_item' %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="group cursor-pointer p-4 rounded-xl border-2 border-transparent hover:border-seed-blue-200 transition-all duration-300 mb-4 bg-white shadow-sm">
+      <h4 class="font-semibold text-seed-blue-950 group-hover:text-seed-blue-600 transition-colors line-clamp-2 mb-2">
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h4>
+      <div class="text-sm text-seed-blue-900/60 line-clamp-2 mb-3">
+        {{ content.body|render|striptags|truncate(120) }}
+      </div>
+      <div class="flex items-center justify-between text-xs text-seed-blue-900/40">
+        <span class="font-medium text-seed-blue-600">{{ content.field_article_category }}</span>
+        <div class="flex items-center gap-3">
+          <span>{{ node.getCreatedTime()|date('d/m/y') }}</span>
+          <span class="text-seed-blue-600 font-medium group-hover:underline">Leer más →</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% elseif view_mode == 'teaser_grid_card' %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="group cursor-pointer flex flex-col bg-white rounded-xl border border-seed-gray-100 overflow-hidden hover:shadow-lg hover:border-seed-blue-200 transition-all duration-300 h-full">
+      {# Thumbnail #}
+      <div class="w-full relative overflow-hidden aspect-video">
+        {% if content.field_image %}
+          {{ content.field_image }}
+        {% endif %}
+        <div class="absolute bottom-0 left-0 right-0 z-10">
+          <span class="block w-full px-3 py-1.5 bg-seed-blue-600 group-hover:bg-seed-blue-700 text-white text-[10px] font-semibold transition-colors duration-300">
+            {{ content.field_article_category }}
+          </span>
+        </div>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-bold text-seed-blue-950 group-hover:text-seed-blue-600 transition-colors line-clamp-2 mb-2 text-sm">
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h3>
+        <div class="text-seed-blue-900/60 text-xs line-clamp-2 mb-3 flex-1">
+          {{ content.body|render|striptags|truncate(100) }}
+        </div>
+        <div class="flex items-center justify-between text-xs text-seed-blue-900/40">
+          <span>{{ node.getCreatedTime()|date('d/m/y') }}</span>
+          <span class="text-seed-blue-600 font-medium group-hover:underline">Leer más →</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% else %}
+  {# FALLBACK PARA FULL Y OTROS (No interfiere con Canvas) #}
+  <article{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_image', 'field_article_category') }}
+      {# Renderizamos los campos que sacamos del flow normal si no están en otro lado #}
+      {% if not content.body %}
+         {{ content }}
+      {% endif %}
+    </div>
+  </article>
+{% endif %}

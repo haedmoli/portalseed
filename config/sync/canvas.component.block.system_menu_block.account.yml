@@ -25,3 +25,4 @@ id: block.system_menu_block.account
 provider: system
 source: block
 source_local_id: 'system_menu_block:account'
+weight: 0

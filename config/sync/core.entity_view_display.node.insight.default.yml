@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.insight.body
     - field.field.node.insight.field_article_category
+    - field.field.node.insight.field_destacado
     - field.field.node.insight.field_image
     - node.type.insight
   module:
@@ -21,6 +22,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_destacado:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

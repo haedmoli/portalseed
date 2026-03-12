@@ -20,3 +20,4 @@ id: block.system_messages_block
 provider: system
 source: block
 source_local_id: system_messages_block
+weight: 0

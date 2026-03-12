@@ -1,0 +1,79 @@
+name: 'Contact Hero'
+description: 'Sección principal de contacto con diseño Glassmorphism y área para insertar el formulario.'
+group: 'Contacto'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Título'
+      default: 'Contacto'
+    subheading:
+      type: string
+      title: 'Descripción (efecto máquina de escribir)'
+      default: 'Si estás buscando ayuda con un proyecto nuevo, una migración a Drupal o solución a un problema específico sobre un sitio existente, no dudes en contactarnos.'
+    address_1_label:
+      type: string
+      title: 'Dir 1: Etiqueta'
+      default: 'Dirección'
+    address_1_value:
+      type: string
+      title: 'Dir 1: Valor'
+      default: 'Calle 150 No. 21A-14, P2, Bogotá, Colombia'
+    address_2_label:
+      type: string
+      title: 'Dir 2: Etiqueta'
+      default: 'Oficina Miami'
+    address_2_value:
+      type: string
+      title: 'Dir 2: Valor'
+      default: '4855 W Hillsboro Blvd Suite B3, Coconut Creek, FL 33073'
+    phone_label:
+      type: string
+      title: 'Teléfono: Etiqueta'
+      default: 'Teléfono'
+    phone_value:
+      type: string
+      title: 'Teléfono: Valor'
+      default: '(+57) 3118608152'
+    phone_url:
+      type: string
+      title: 'Teléfono: Enlace'
+      default: 'tel:+573118608152'
+    email_label:
+      type: string
+      title: 'Correo: Etiqueta'
+      default: 'Correo electrónico'
+    email_value:
+      type: string
+      title: 'Correo: Valor'
+      default: 'info@seedem.co'
+    email_url:
+      type: string
+      title: 'Correo: Enlace'
+      default: 'mailto:info@seedem.co'
+    support_label:
+      type: string
+      title: 'Soporte: Etiqueta'
+      default: 'Soporte'
+    support_value:
+      type: string
+      title: 'Soporte: Valor'
+      default: 'Centro de soporte'
+    support_url:
+      type: string
+      title: 'Soporte: Enlace'
+      default: 'https://seedem.freshdesk.com/support/login'
+slots:
+  form_slot:
+    title: 'Área del Webform'
+    description: 'Arrastra aquí un bloque nativo de Webform desde Canvas para configurarlo avanzado'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      contact-hero.css: {}
+  js:
+    contact-hero.js: {}

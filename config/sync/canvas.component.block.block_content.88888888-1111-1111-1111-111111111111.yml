@@ -23,3 +23,4 @@ id: block.block_content.88888888-1111-1111-1111-111111111111
 provider: block_content
 source: block
 source_local_id: 'block_content:88888888-1111-1111-1111-111111111111'
+weight: 0

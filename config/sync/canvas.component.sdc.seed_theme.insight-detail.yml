@@ -1,0 +1,273 @@
+uuid: 6e8ace4b-17b2-41df-a45c-711377eaf7a7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  module:
+    - datetime
+    - file
+    - media
+    - media_library
+    - text
+  theme:
+    - seed_theme
+active_version: 7450aff3044517ce
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        banner_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        banner_image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        publish_date:
+          required: false
+          field_type: datetime
+          field_storage_settings:
+            datetime_type: date
+          field_instance_settings: {  }
+          field_widget: datetime_default
+          default_value: null
+          expression: ℹ︎datetime␟value
+        content:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        share_links:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+  2279571ec99ec44e:
+    settings:
+      prop_field_definitions:
+        banner_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        banner_image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        publish_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        content:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        share_links:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+  068c121f140ac78d:
+    settings:
+      prop_field_definitions:
+        banner_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        banner_image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        publish_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        content:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        share_links:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+  9e7ebd5c8420495e:
+    settings:
+      prop_field_definitions:
+        banner_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        banner_image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        publish_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        content:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        share_links:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Insight Detail'
+id: sdc.seed_theme.insight-detail
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:insight-detail'

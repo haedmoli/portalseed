@@ -1,0 +1,10 @@
+uuid: 64491ed0-db4a-406f-92e4-398fd3861c8e
+langcode: es
+status: true
+dependencies: {  }
+name: Estructura
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.three-columns
+  - sdc.seed_theme.two-columns

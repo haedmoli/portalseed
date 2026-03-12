@@ -7,3 +7,7 @@ configEntityTypeId: component
 weight: 0
 items:
   - sdc.olivero.teaser
+  - sdc.seed_theme.insight-detail
+  - sdc.seed_theme.insight-grid-section
+  - sdc.seed_theme.insight-hero
+  - sdc.seed_theme.insight-recent-layout

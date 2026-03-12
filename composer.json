@@ -29,6 +29,7 @@
         "drupal/pathauto": "*",
         "drupal/redirect": "*",
         "drupal/sharethis": "^3.1",
+        "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.2@beta",
         "drupal/yoast_seo": "^2.2",
         "drush/drush": "^13.7"

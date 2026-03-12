@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Dos Columnas (Sidebar)'
+description: 'Layout estructural de dos columnas para usar como Contenido Principal y Barra Lateral (Sidebar).'
+status: experimental
+group: 'Estructura'
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Clases CSS y atributos envolventes
+    layout_type:
+      type: string
+      title: 'Proporción de Columnas'
+      enum:
+        - '80-20'
+        - '70-30'
+        - '60-40'
+        - '50-50'
+slots:
+  main_content:
+    title: 'Columna Principal (Izquierda)'
+    description: 'Slot para el contenido principal.'
+  sidebar:
+    title: 'Columna Lateral (Derecha / Sidebar)'
+    description: 'Slot para la barra lateral.'

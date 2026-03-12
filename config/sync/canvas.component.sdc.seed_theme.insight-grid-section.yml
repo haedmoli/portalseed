@@ -1,0 +1,52 @@
+uuid: 31b70add-7908-4c5b-a61c-1c19e84dc444
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seed_theme
+active_version: 70a6f94d0ce9de38
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        bg_gray:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        view_all_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        view_all_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        grid_slot:
+          title: 'Grilla de Artículos (Views Block)'
+label: 'Insight Grid Section'
+id: sdc.seed_theme.insight-grid-section
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:insight-grid-section'

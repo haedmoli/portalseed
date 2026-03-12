@@ -1,0 +1,26 @@
+uuid: fcf248f0-663b-4803-89fa-42c76376705a
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.insights_landing
+  module:
+    - views
+active_version: 9e385f63796a6259
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:insights_landing-block_all'
+        label: 'Insights Landing: All Insights (Grid)'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Insights Landing: All Insights (Grid)'
+id: block.views_block.insights_landing-block_all
+provider: views
+source: block
+source_local_id: 'views_block:insights_landing-block_all'

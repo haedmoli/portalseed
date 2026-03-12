@@ -3,7 +3,7 @@ _core:
 button_option: stbc_button
 comments: 0
 late_load: 0
-location: content
+location: block
 node_types:
   article: article
   page: page

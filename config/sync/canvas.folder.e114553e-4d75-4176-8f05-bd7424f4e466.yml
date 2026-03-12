@@ -1,0 +1,9 @@
+uuid: e114553e-4d75-4176-8f05-bd7424f4e466
+langcode: es
+status: true
+dependencies: {  }
+name: Moléculas
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.cta-banner

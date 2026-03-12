@@ -1,0 +1,74 @@
+uuid: 89d33ea1-aa6b-4fcc-ba3c-0680eb72bd3a
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seed_theme
+active_version: 1722e9f072d8a5c3
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_title_highlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        primary_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        primary_button_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        secondary_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        secondary_button_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'About CTA'
+id: sdc.seed_theme.about-cta
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:about-cta'

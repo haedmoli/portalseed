@@ -8,4 +8,10 @@ weight: 0
 items:
   - block.views_block.comments_recent-block_1
   - block.views_block.content_recent-block_1
+  - block.views_block.insight_relacionados-block_1
+  - block.views_block.insight_relacionados-block_2
+  - block.views_block.insights_landing-block_all
+  - block.views_block.insights_landing-block_most_searched
+  - block.views_block.insights_landing-block_recent_featured
+  - block.views_block.insights_landing-block_recent_list
   - block.views_block.who_s_online-who_s_online_block

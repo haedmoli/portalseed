@@ -1,0 +1,7 @@
+name: 'Portal Seed Custom'
+type: module
+description: 'Customizations for the Portal Seed project.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - canvas:canvas

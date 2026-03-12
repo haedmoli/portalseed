@@ -1,0 +1,108 @@
+uuid: c1f3b121-de6f-487f-a60a-faa9a9a79915
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  module:
+    - file
+    - media
+    - media_library
+  theme:
+    - seed_theme
+active_version: e1822eac0d274372
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title_regular:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title_highlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        title_end:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        highlight_words:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        background_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        main_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        years_experience:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        projects_count:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'About Hero'
+id: sdc.seed_theme.about-hero
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:about-hero'

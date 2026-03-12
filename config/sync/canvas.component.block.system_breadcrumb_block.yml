@@ -20,3 +20,4 @@ id: block.system_breadcrumb_block
 provider: system
 source: block
 source_local_id: system_breadcrumb_block
+weight: 0

@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Tres Columnas'
+description: 'Layout estructural de tres columnas para mostrar contenido en paralelo.'
+status: experimental
+group: 'Estructura'
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Clases CSS y atributos envolventes
+    layout_type:
+      type: string
+      title: 'Proporción de Columnas'
+      enum:
+        - '33-33-33'
+        - '25-50-25'
+slots:
+  col_1:
+    title: 'Columna Izquierda'
+    description: 'Slot para el contenido de la primera columna.'
+  col_2:
+    title: 'Columna Central'
+    description: 'Slot para el contenido de la segunda columna.'
+  col_3:
+    title: 'Columna Derecha'
+    description: 'Slot para el contenido de la tercera columna.'

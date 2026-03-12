@@ -1,0 +1,55 @@
+uuid: 88f1269c-d6a5-4585-b123-ffcc8c9c0e07
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - seed_theme
+active_version: e54ec1b8ff219bca
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        layout_type:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        main_content:
+          title: 'Columna Principal (Izquierda)'
+          description: 'Slot para el contenido principal.'
+        sidebar:
+          title: 'Columna Lateral (Derecha / Sidebar)'
+          description: 'Slot para la barra lateral.'
+  22c9dcb4c1c33090:
+    settings:
+      prop_field_definitions:
+        layout_type:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        main_content:
+          title: 'Columna Principal (Izquierda)'
+          description: 'Slot para el contenido principal.'
+        sidebar:
+          title: 'Columna Lateral (Derecha / Sidebar)'
+          description: 'Slot para la barra lateral.'
+label: 'Dos Columnas (Sidebar)'
+id: sdc.seed_theme.two-columns
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:two-columns'

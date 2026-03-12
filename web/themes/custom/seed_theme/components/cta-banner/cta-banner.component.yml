@@ -1,0 +1,29 @@
+name: 'CTA Banner'
+description: 'Banner azul destacado para llamadas a la acción rápidas.'
+group: 'Moléculas'
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Texto del banner'
+      default: '¿Tienes un proyecto digital en mente?'
+    button_label_prefix:
+      type: string
+      title: 'Prefijo del botón (ej: Nosotros lo)'
+      default: 'Nosotros lo'
+    button_label_highlight:
+      type: string
+      title: 'Texto resaltado del botón (ej: hacemos realidad)'
+      default: 'hacemos realidad'
+    button_url:
+      type: string
+      title: 'URL de destino'
+      default: '/contacto'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      cta-banner.css: {}

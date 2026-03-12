@@ -24,3 +24,4 @@ id: block.views_block.who_s_online-who_s_online_block
 provider: views
 source: block
 source_local_id: 'views_block:who_s_online-who_s_online_block'
+weight: 0

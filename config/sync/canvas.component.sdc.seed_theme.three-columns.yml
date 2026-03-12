@@ -1,0 +1,38 @@
+uuid: 9182cff9-5cd4-47c8-b050-014e28bfaf25
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - seed_theme
+active_version: 01f27c06820209a5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        layout_type:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        col_1:
+          title: 'Columna Izquierda'
+          description: 'Slot para el contenido de la primera columna.'
+        col_2:
+          title: 'Columna Central'
+          description: 'Slot para el contenido de la segunda columna.'
+        col_3:
+          title: 'Columna Derecha'
+          description: 'Slot para el contenido de la tercera columna.'
+label: 'Tres Columnas'
+id: sdc.seed_theme.three-columns
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:three-columns'

@@ -1,0 +1,132 @@
+/* Contact Hero Glassmorphism Form Styles */
+.contact-hero-glass-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-hero-glass-form label,
+.contact-hero-glass-form .webform-element-description {
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.contact-hero-glass-form .form-item input[type="text"],
+.contact-hero-glass-form .form-item input[type="email"],
+.contact-hero-glass-form .form-item input[type="tel"],
+.contact-hero-glass-form .form-item textarea,
+.contact-hero-glass-form .form-item select {
+    width: 100%;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 0 !important;
+    color: #fff !important;
+    transition: border-color 0.2s;
+    box-shadow: none !important;
+}
+
+.contact-hero-glass-form .form-item input:focus,
+.contact-hero-glass-form .form-item textarea:focus,
+.contact-hero-glass-form .form-item select:focus {
+    outline: none !important;
+    border-bottom-color: #22d3ee !important;
+    /* seed-blue-400 */
+}
+
+.contact-hero-glass-form .form-item input::placeholder,
+.contact-hero-glass-form .form-item textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+}
+
+/* Custom Switch for PQRS */
+.contact-hero-glass-form .pg-custom-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.contact-hero-glass-form .pg-custom-switch-wrapper input[type="checkbox"] {
+    appearance: none;
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none !important;
+}
+
+.contact-hero-glass-form .pg-custom-switch-wrapper input[type="checkbox"]:checked {
+    background-color: #22d3ee;
+}
+
+.contact-hero-glass-form .pg-custom-switch-wrapper input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.contact-hero-glass-form .pg-custom-switch-wrapper input[type="checkbox"]:checked::after {
+    transform: translateX(1.25rem);
+}
+
+/* Policy Checkbox */
+.contact-hero-glass-form .pg-policy-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.contact-hero-glass-form .pg-policy-checkbox-wrapper input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    accent-color: #3b82f6;
+    margin-top: 0.25rem;
+}
+
+.contact-hero-glass-form .pg-policy-link {
+    color: #22d3ee;
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.contact-hero-glass-form .form-actions input[type="submit"] {
+    width: 100%;
+    background-color: #3b82f6 !important;
+    /* seed-blue-500 */
+    color: #fff !important;
+    font-weight: 500 !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    border: none !important;
+    cursor: pointer;
+    transition: background-color 0.3s !important;
+    margin-top: 1.5rem !important;
+}
+
+.contact-hero-glass-form .form-actions input[type="submit"]:hover {
+    background-color: #2563eb !important;
+    /* seed-blue-600 */
+}
+
+/* Webform States - Transition */
+.contact-hero-glass-form .webform-conditional-wrapper {
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}

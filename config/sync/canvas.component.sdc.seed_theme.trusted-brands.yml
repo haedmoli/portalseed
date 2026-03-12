@@ -1,0 +1,162 @@
+uuid: 9e523e67-217d-406e-adca-a9eb64582874
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  module:
+    - file
+    - media
+    - media_library
+  theme:
+    - seed_theme
+active_version: 0c1c214dffe2599f
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title_regular:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_title_highlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        test_field_sync:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        logo_1:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_2:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_3:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_4:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_5:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_6:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_7:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_8:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Trusted Brands'
+id: sdc.seed_theme.trusted-brands
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:trusted-brands'

@@ -1,0 +1,70 @@
+{{ attach_library('seed_theme/footer-contact') }}
+
+<section class="footer-contact py-16 md:py-24 bg-white">
+  <div class="container-custom mx-auto px-4">
+    <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+      
+      {# Left Column #}
+      <div class="animate-fade-in">
+        <h2 class="mb-8 leading-tight">
+          {{ heading|replace({ (heading_highlight): '<span>' ~ heading_highlight ~ '</span>' })|raw }}
+        </h2>
+        <p class="text-lg mb-10 leading-relaxed max-w-xl">
+          {{ description }}
+        </p>
+
+        {# Info items #}
+        <div class="space-y-6 mb-12">
+          <div class="info-box">
+            <div class="info-icon">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="info-text">
+              <div class="label">Correo electrónico</div>
+              <a href="mailto:{{ email }}" class="value">{{ email }}</a>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="info-text">
+              <div class="label">Teléfono</div>
+              <a href="tel:{{ phone|replace({' ': ''}) }}" class="value">{{ phone }}</a>
+            </div>
+          </div>
+        </div>
+
+        {# Guarantee box #}
+        <div class="guarantee-box animate-slide-up">
+          <div class="guarantee-icon">
+             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div class="font-bold text-emerald-950 text-xl">{{ guarantee_text }}</div>
+            <p class="text-sm opacity-80">{{ guarantee_sub }}</p>
+          </div>
+        </div>
+      </div>
+
+      {# Right Column - Form Container #}
+      <div class="form-container animate-slide-up" style="animation-delay: 200ms">
+        <div class="mb-10">
+          <h3>Hablemos</h3>
+          <p>¿Cómo podemos ayudarte hoy?</p>
+        </div>
+
+        {# Slot for Drupal Webform #}
+        <div class="contact-form-wrapper">
+          {% block form_slot %}
+            <div class="text-slate-400 font-medium text-center py-16 border-2 border-dashed border-slate-200 rounded-2xl bg-white/50">
+               <span class="block text-3xl mb-4">📝</span>
+               Arrastra un bloque <strong>Webform</strong> aquí dentro en Canvas.
+            </div>
+          {% endblock %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

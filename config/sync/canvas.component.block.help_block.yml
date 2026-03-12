@@ -20,3 +20,4 @@ id: block.help_block
 provider: help
 source: block
 source_local_id: help_block
+weight: 0

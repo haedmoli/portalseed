@@ -1,0 +1,59 @@
+/* CTA Banner Styles */
+
+.cta-banner {
+  font-family: 'Outfit', sans-serif;
+}
+
+.cta-banner .banner-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 3.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.2);
+}
+
+.cta-banner h3 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cta-banner .btn-cta {
+  background: #0078d3;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta-banner .btn-cta:hover {
+  background: #ffffff;
+  color: #0f172a;
+  transform: scale(1.02);
+}
+
+.cta-banner .glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 120, 211, 0.2);
+  filter: blur(60px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .cta-banner .banner-container {
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}

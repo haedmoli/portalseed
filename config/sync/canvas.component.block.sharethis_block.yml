@@ -20,3 +20,4 @@ id: block.sharethis_block
 provider: sharethis
 source: block
 source_local_id: sharethis_block
+weight: 0

@@ -1,0 +1,63 @@
+name: 'About Hero'
+description: 'Hero section specifically for About (¿Por qué Seed EM?) page.'
+group: 'Por qué Seed EM'
+props:
+  type: object
+  properties:
+    title_regular:
+      type: string
+      title: 'Título Regular'
+      description: 'The regular part of the title'
+
+    title_highlight:
+      type: string
+      title: 'Título Destacado'
+      description: 'The highlighted part of the title'
+
+    title_end:
+      type: string
+      title: 'Final del Título'
+      description: 'The end part of the title'
+
+    description:
+      type: string
+      title: 'Descripción'
+      description: 'Description text, will have a typewriter effect for specific words.'
+
+    highlight_words:
+      type: string
+      title: 'Palabras a destacar (separadas por coma)'
+      description: 'Words that should appear bold in the typewriter effect'
+
+    background_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Imagen de fondo'
+
+    main_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Imagen principal'
+
+    years_experience:
+      type: string
+      title: 'Años de experiencia (ej: 18)'
+
+    projects_count:
+      type: string
+      title: 'Cantidad de proyectos (ej: 150+)'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      about-hero.css: {}
+  js:
+    about-hero.js: { defer: true, attributes: { type: module } }

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
     - system
   theme:
     - seed_theme
@@ -11,7 +12,7 @@ _core:
 id: seed_theme_page_title
 theme: seed_theme
 region: content
-weight: -5
+weight: -9
 provider: null
 plugin: page_title_block
 settings:
@@ -29,3 +30,10 @@ visibility:
       /*/contacto
       /node/5
       /*/node/5
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      insight: insight

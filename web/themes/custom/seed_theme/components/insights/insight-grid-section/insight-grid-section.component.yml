@@ -1,0 +1,25 @@
+name: Insight Grid Section
+description: 'Sección para mostrar grids de artículos (Más buscados / Todos los insights).'
+category: Insights
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Título de la Sección'
+      default: 'Todos los insights'
+    bg_gray:
+      type: boolean
+      title: '¿Fondo Gris?'
+      default: false
+    view_all_text:
+      type: string
+      title: 'Texto: Ver todos'
+      default: ''
+    view_all_url:
+      type: string
+      title: 'Enlace: Ver todos'
+      default: ''
+slots:
+  grid_slot:
+    title: 'Grilla de Artículos (Views Block)'

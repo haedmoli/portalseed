@@ -24,3 +24,4 @@ id: block.webform_block
 provider: webform
 source: block
 source_local_id: webform_block
+weight: 0

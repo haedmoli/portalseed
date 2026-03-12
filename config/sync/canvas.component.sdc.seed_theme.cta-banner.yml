@@ -1,0 +1,50 @@
+uuid: 305ce443-c710-4e62-861c-fadfaf4d5434
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seed_theme
+active_version: 2d3135afc67538fc
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        button_label_prefix:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        button_label_highlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        button_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'CTA Banner'
+id: sdc.seed_theme.cta-banner
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:cta-banner'

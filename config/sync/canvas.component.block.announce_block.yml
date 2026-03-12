@@ -20,3 +20,4 @@ id: block.announce_block
 provider: announcements_feed
 source: block
 source_local_id: announce_block
+weight: 0

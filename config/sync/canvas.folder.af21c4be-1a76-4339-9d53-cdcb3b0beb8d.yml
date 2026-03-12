@@ -1,0 +1,9 @@
+uuid: af21c4be-1a76-4339-9d53-cdcb3b0beb8d
+langcode: es
+status: true
+dependencies: {  }
+name: Contacto
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.contact-hero

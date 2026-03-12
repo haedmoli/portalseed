@@ -1,0 +1,15 @@
+@keyframes custom-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-continuous {
+    animation: custom-scroll 30s linear infinite;
+    /* Width must be wide enough so -50% shifts exactly one entire set of items */
+    /* This works best when identical items are duplicated */
+}

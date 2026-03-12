@@ -1,0 +1,89 @@
+uuid: 43bb9cfe-f7ab-4577-9ed5-d28282102030
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  module:
+    - file
+    - media
+    - media_library
+  theme:
+    - seed_theme
+active_version: 99608b61c5e28d8e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title_regular:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_title_highlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        logo_1_url:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_2_url:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+        logo_3_url:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟entity␜␜entity:file␝uri␞␟value'
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Alliances Certifications'
+id: sdc.seed_theme.alliances-certifications
+provider: seed_theme
+source: sdc
+source_local_id: 'seed_theme:alliances-certifications'

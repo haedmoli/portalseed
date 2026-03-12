@@ -1,0 +1,9 @@
+uuid: ad195e25-e2d9-4b7e-b606-95c475d62bc0
+langcode: es
+status: true
+dependencies: {  }
+name: Test
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.test-image

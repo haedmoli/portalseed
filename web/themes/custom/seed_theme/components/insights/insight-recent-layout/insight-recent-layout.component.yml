@@ -1,0 +1,8 @@
+name: Insight Recent Layout
+description: 'Layout para la sección de artículos recientes con un destacado y una lista lateral.'
+category: Insights
+slots:
+  featured:
+    title: 'Artículo Destacado (Grande)'
+  recent_list:
+    title: 'Lista de Artículos Recientes'

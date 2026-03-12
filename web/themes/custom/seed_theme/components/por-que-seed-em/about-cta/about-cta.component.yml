@@ -1,0 +1,33 @@
+name: 'About CTA'
+description: 'Call to Action final para invitar a contactar o ver servicios.'
+group: 'Por qué Seed EM'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Título de la Sección'
+    section_title_highlight:
+      type: string
+      title: 'Parte resaltada del título'
+    section_description:
+      type: string
+      title: 'Descripción (bajorrelieve)'
+    primary_button_text:
+      type: string
+      title: 'Texto Botón Primario'
+    primary_button_url:
+      type: string
+      title: 'URL Botón Primario'
+    secondary_button_text:
+      type: string
+      title: 'Texto Botón Secundario'
+    secondary_button_url:
+      type: string
+      title: 'URL Botón Secundario'
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      about-cta.css: {}

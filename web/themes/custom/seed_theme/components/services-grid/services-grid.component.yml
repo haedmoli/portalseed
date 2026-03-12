@@ -1,0 +1,100 @@
+name: 'Services Grid'
+description: 'Sección de cuadrícula de servicios con tarjetas individuales, iconos y listado de características.'
+group: 'Organismos'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Título de la Sección'
+      default: 'Servicios que'
+    section_title_highlight:
+      type: string
+      title: 'Palabra resaltada del título'
+      default: 'impulsan'
+    section_description:
+      type: string
+      title: 'Descripción de la sección'
+      default: 'Ofrecemos soluciones integrales de desarrollo, hosting y soporte técnico especializado con más de 12 años de experiencia.'
+    
+    # Card 1
+    s1_title:
+      type: string
+      title: 'S1: Título'
+      default: 'Desarrollo Drupal'
+    s1_desc:
+      type: string
+      title: 'S1: Descripción'
+      default: 'Creamos sitios web y aplicaciones robustas con el CMS más potente del mercado.'
+    s1_features:
+      type: string
+      title: 'S1: Lista items (CSV)'
+      default: 'Arquitectura escalable, Módulos personalizados, Integraciones API, E-commerce'
+    s1_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S1: Icono'
+    s1_url:
+      type: string
+      title: 'S1: URL Saber más'
+      default: '#'
+
+    # Card 2
+    s2_title:
+      type: string
+      title: 'S2: Título'
+      default: 'Hosting Especializado Drupal'
+    s2_desc:
+      type: string
+      title: 'S2: Descripción'
+      default: 'Hosting Drupal de alto rendimiento para proyectos que requieren estabilidad y seguridad.'
+    s2_features:
+      type: string
+      title: 'S2: Lista items (CSV)'
+      default: 'Optimizado para Drupal, Soporte técnico directo, Gestión de servidores, Backup y monitoreo'
+    s2_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S2: Icono'
+    s2_url:
+      type: string
+      title: 'S2: URL Saber más'
+      default: '#'
+
+    # Card 3
+    s3_title:
+      type: string
+      title: 'S3: Título'
+      default: 'Soporte y Mantenimiento Drupal'
+    s3_desc:
+      type: string
+      title: 'S3: Descripción'
+      default: 'Garantizamos el óptimo funcionamiento de tus plataformas con soporte continuo.'
+    s3_features:
+      type: string
+      title: 'S3: Lista items (CSV)'
+      default: 'Monitoreo 24/7, Auditoría de seguridad, Soporte especializado, actualizaciones proactivas'
+    s3_icon:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'S3: Icono'
+    s3_url:
+      type: string
+      title: 'S3: URL Saber más'
+      default: '#'
+
+libraryOverrides:
+  dependencies:
+    - seed_theme/global
+  css:
+    component:
+      services-grid.css: {}

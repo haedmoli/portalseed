@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - eck.eck_entity_type.project
+    - eck.eck_entity_type.
 name: Project
 type: project
 description: null

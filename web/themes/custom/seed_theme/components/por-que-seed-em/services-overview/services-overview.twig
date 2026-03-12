@@ -1,0 +1,124 @@
+{{ attach_library('seed_theme/services-overview') }}
+
+{% set render_services = [
+  {
+    'id': 'desarrollo',
+    'title': s1_title|default('Desarrollo Drupal'),
+    'description': s1_desc|default('Creamos sitios web y aplicaciones robustas con el CMS más potente del mercado.'),
+    'features': s1_features|default('Arquitectura escalable, Módulos personalizados, Integraciones API, Performance optimizada'),
+    'icon': s1_icon
+  },
+  {
+    'id': 'hosting',
+    'title': s2_title|default('Hosting especializado'),
+    'description': s2_desc|default('Hosting Drupal de alto rendimiento para sitios exigentes.'),
+    'features': s2_features|default('Optimizado para Drupal, Seguridad avanzada, Escalable y flexible, Soporte experto'),
+    'icon': s2_icon
+  },
+  {
+    'id': 'mantenimiento',
+    'title': s3_title|default('Mantenimiento y Soporte'),
+    'description': s3_desc|default('Garantizamos el óptimo funcionamiento de tus plataformas.'),
+    'features': s3_features|default('Monitoreo 24/7, Actualizaciones de seguridad, Backup automático, SLA garantizado'),
+    'icon': s3_icon
+  }
+] %}
+
+<section id="servicios" class="py-8 md:py-16 bg-seed-gray-900" data-services-overview>
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+    {# Header #}
+    <div class="text-center mb-12 animate-slide-up">
+      <p class="text-cyan-400 font-medium text-sm uppercase tracking-wider mb-3">{{ section_label|default('Nuestros Servicios') }}</p>
+      <h2 class="font-heading font-bold text-white mb-6 text-2xl md:text-3xl lg:text-4xl">
+        {{ section_title|default('Lo que') }}
+        <span class="bg-gradient-to-r from-cyan-400 to-seed-blue-400 bg-clip-text text-transparent inline-block border-b-4 border-cyan-400 pb-1">{{ section_title_highlight|default('hacemos') }}</span>
+        por ti
+      </h2>
+      <p class="text-[14px] md:text-[16px] text-seed-gray-300 max-w-3xl mx-auto text-balance">
+        {{ section_description|default('Soluciones integrales de desarrollo, hosting y soporte Drupal para impulsar tu transformación digital con resultados medibles') }}
+      </p>
+    </div>
+
+    {# Mobile Accordion View #}
+    <div class="lg:hidden">
+      <div class="space-y-4" data-accordion-container>
+        {% for service in render_services %}
+          {% set is_first = loop.first %}
+          <div class="accordion-item overflow-hidden border-none" data-service-id="{{ service.id }}">
+            <button class="accordion-trigger w-full group px-6 py-4 rounded-full border-2 transition-all {{ is_first ? 'border-cyan-400 bg-white is-active' : 'border-cyan-400/50 bg-seed-gray-900' }}" aria-expanded="{{ is_first ? 'true' : 'false' }}">
+              <div class="flex items-center gap-4 text-left">
+                <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center">
+                  {% if service.icon %}
+                    <img src="{{ file_url(service.icon) }}" alt="{{ service.title }}" class="h-10 w-auto object-contain" />
+                  {% else %}
+                     <div class="w-8 h-8 bg-cyan-400 rounded-full"></div>
+                  {% endif %}
+                </div>
+                <span class="font-heading font-semibold text-[18px] transition-colors {{ is_first ? 'text-seed-gray-900' : 'text-white group-hover:text-cyan-400' }} accordion-title">
+                  {{ service.title }}
+                </span>
+              </div>
+            </button>
+            <div class="accordion-content px-4 pb-4 pt-2 transition-all duration-300 {{ is_first ? 'block' : 'hidden' }}">
+              <div class="rounded-lg p-6 mt-2">
+                <p class="text-seed-gray-100 text-[14px] md:text-base mb-4">
+                  {{ service.description }}
+                </p>
+                <ul class="space-y-3 mb-6">
+                  {% set features_list = service.features|split(',') %}
+                  {% for feature in features_list %}
+                    <li class="flex items-center text-[14px] md:text-base text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                      {{ feature|trim }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Desktop Two-Column View #}
+    <div class="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
+      <div class="space-y-4">
+        {% for service in render_services %}
+          {% set is_first = loop.first %}
+          <button data-desktop-trigger="{{ service.id }}" class="desktop-service-trigger w-full flex items-center gap-5 px-6 py-4 rounded-full border-2 transition-all duration-300 text-left {{ is_first ? 'border-cyan-400 bg-white is-active' : 'border-cyan-400/50 bg-seed-gray-900/80 hover:bg-seed-gray-900 hover:border-cyan-400' }}">
+            <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center">
+              {% if service.icon %}
+                <img src="{{ file_url(service.icon) }}" alt="{{ service.title }}" class="h-10 w-auto object-contain" />
+              {% else %}
+                 <div class="w-8 h-8 bg-cyan-400 rounded-full"></div>
+              {% endif %}
+            </div>
+            <span class="font-heading font-semibold text-xl transition-colors desktop-service-title {{ is_first ? 'text-seed-gray-900' : 'text-white' }}">
+              {{ service.title }}
+            </span>
+          </button>
+        {% endfor %}
+      </div>
+
+      <div class="lg:sticky lg:top-24 min-h-[400px]">
+        {% for service in render_services %}
+           {% set is_first = loop.first %}
+           <div data-desktop-content="{{ service.id }}" class="bg-transparent rounded-xl p-6 transition-opacity duration-300 {{ is_first ? 'opacity-100 relative' : 'opacity-0 absolute pointer-events-none' }}" style="{{ is_first ? '' : 'top:0; left:0; width:100%;' }}">
+             <p class="text-seed-gray-100 text-[14px] md:text-base mb-6">
+               {{ service.description }}
+             </p>
+             <ul class="space-y-3">
+               {% set features_list = service.features|split(',') %}
+               {% for feature in features_list %}
+                 <li class="flex items-center text-[14px] md:text-base text-white">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                   {{ feature|trim }}
+                 </li>
+               {% endfor %}
+             </ul>
+           </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

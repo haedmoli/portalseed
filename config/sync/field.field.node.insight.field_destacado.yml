@@ -1,0 +1,21 @@
+uuid: cd7cbc1d-9f9e-40ef-9b15-675a834ba07c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destacado
+    - node.type.insight
+id: node.insight.field_destacado
+field_name: field_destacado
+entity_type: node
+bundle: insight
+label: Destacado
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

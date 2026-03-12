@@ -20,3 +20,4 @@ id: block.language_block.language_interface
 provider: language
 source: block
 source_local_id: 'language_block:language_interface'
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 9888a91b-04ae-4fca-8093-e066e1a6abaa
+langcode: es
+status: true
+dependencies: {  }
+name: 'Por qué Seed EM'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.seed_theme.about-credentials
+  - sdc.seed_theme.about-cta
+  - sdc.seed_theme.about-hero
+  - sdc.seed_theme.alliances-certifications
+  - sdc.seed_theme.services-overview
+  - sdc.seed_theme.trusted-brands

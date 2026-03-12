@@ -20,3 +20,4 @@ id: block.user_login_block
 provider: user
 source: block
 source_local_id: user_login_block
+weight: 0

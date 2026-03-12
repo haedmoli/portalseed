@@ -31,3 +31,4 @@ id: sdc.olivero.teaser
 provider: olivero
 source: sdc
 source_local_id: 'olivero:teaser'
+weight: 0

@@ -1,0 +1,48 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Insight Detail'
+description: 'Componente principal para el detalle de un Insight con título, imagen, fecha y cuerpo dinámico.'
+status: experimental
+group: 'Organismos'
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Clases CSS y atributos envolventes
+
+    # Imagen
+    banner_image:
+      type: string
+      format: uri
+      contentMediaType: 'image/*'
+      x-allowed-schemes:
+        - public
+      title: 'Imagen de Cabecera'
+
+    banner_image_alt:
+      type: string
+      title: 'Alt text para la imagen'
+
+    # Titulo
+    title:
+      type: string
+      title: 'Título del Artículo (H1)'
+
+    # Fecha
+    publish_date:
+      type: string
+      format: date
+      title: 'Fecha de Publicación (Mapeo: Authored On)'
+
+    # Contenido (Mapeado a field_body o similar)
+    content:
+      type: string
+      contentMediaType: 'text/html'
+      title: 'Cuerpo del Contenido'
+
+    # Enlaces de Compartir (Social/ShareThis)
+    share_links:
+      type: string
+      contentMediaType: 'text/html'
+      title: 'Enlaces de Compartir (Social/ShareThis)'

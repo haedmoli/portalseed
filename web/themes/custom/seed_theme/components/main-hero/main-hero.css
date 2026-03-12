@@ -7,9 +7,9 @@
 
 /* ── Design tokens (inherit from theme variables, fallback to literal values) */
 .main-hero {
-    --mh-accent: var(--seed-blue-600, #0369a1);
-    --mh-accent-hover: var(--seed-blue-700, #0c4a6e);
-    --mh-bg: var(--seed-gray-50, #f8fafc);
+    --mh-accent: #0078d3;
+    --mh-accent-hover: #005fa3;
+    --mh-bg: #ffffff;
     --mh-card-bg: #ffffff;
     --mh-text: var(--seed-gray-800, #1e293b);
     --mh-text-muted: var(--seed-gray-500, #64748b);
@@ -79,7 +79,7 @@
 /* Heading */
 .main-hero__heading {
     margin: 0;
-    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-family: 'Outfit', sans-serif;
     font-weight: 800;
     line-height: 1.15;
     font-size: clamp(2rem, 5vw, 3.5rem);
