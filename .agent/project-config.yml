@@ -4,7 +4,9 @@
 # Valid options:
 # - "twig": Generates Drupal Single Directory Components (SDCs) using Twig, CSS, and component.yml.
 #           Strictly follows the rules in `.agent/skills/Manifesto-librería-canvas.md`.
-# - "react": Generates React components (.jsx) matching the official Canvas ecosystem.
+# - "react": Generates React components (.jsx) matching the official Canvas ecosystem inside Drupal.
 #            Strictly follows the rules in `.agent/skills/external/canvas-react-skills/`.
+# - "react_decoupled": Generates React components (.tsx/.jsx) for a fully decoupled frontend application.
+#                      Uses JSON:API, SWR, and decoupled routing to fetch Canvas data from Drupal.
 
-canvas_stack: "twig"
+canvas_stack: "react_decoupled"

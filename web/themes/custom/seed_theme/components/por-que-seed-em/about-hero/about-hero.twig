@@ -19,10 +19,12 @@
           <span class="text-seed-blue-600">{{ title_highlight|default('Drupal') }}</span> 
           {{ title_end|default('de alto desempeño') }}
         </h1>
+        {% set desc_text = description|trim is not empty ? description : 'Impulsamos la transformación digital de las organizaciones. Creemos que la tecnología debe ser un activo estratégico que potencie el crecimiento, la eficiencia y la sostenibilidad del negocio.' %}
         <p class="text-[14px] md:text-[16px] lg:text-[18px] text-seed-gray-700 leading-relaxed min-h-[100px] md:min-h-[120px] type-writer-text"
            data-about-hero-typewriter
-           data-full-text="{{ description|default('Impulsamos la transformación digital de las organizaciones. Creemos que la tecnología debe ser un activo estratégico que potencie el crecimiento, la eficiencia y la sostenibilidad del negocio.') }}"
+           data-full-text="{{ desc_text }}"
            data-highlight-words="{{ highlight_words|default('transformación,digital,tecnología,estratégico,crecimiento') }}">
+          {# Fallback for testing visibility without JS — if this shows, data is present #}
         </p>
       </div>
 

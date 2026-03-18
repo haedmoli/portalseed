@@ -55,6 +55,8 @@ props:
 
 libraryOverrides:
   dependencies:
+    - core/drupal
+    - core/once
     - seed_theme/global
   css:
     component:

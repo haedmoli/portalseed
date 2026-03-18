@@ -24,13 +24,22 @@ If the project is configured for **Twig**, you are building native Drupal Single
 
 ## 2. If `canvas_stack` == "react"
 
-If the project is configured for **React**, you are building components matching the official Canvas Javascript ecosystem.
+If the project is configured for **React** (integrated inside Drupal), you are building components matching the official Canvas Javascript ecosystem but served by Drupal.
 
 **Rules you MUST follow:**
 * **Read:** `.agent/skills/external/canvas-react-skills/*/SKILL.md`. This external folder is your ONLY source of truth.
 * **Ignore Manifesto:** Completely ignore `.agent/skills/Manifesto-librería-canvas.md` and any SDC Twig practices.
-* **Implementation:** Use React `.jsx`, Tailwind CSS 4 with the `cn()` utility from `clsx`/`tailwind-merge`, and Class Variance Authority (CVA) for styling as detailed in the `canvas-styling-conventions` skill.
-* **Component Registration:** Ensure components are registered according to the `canvas-component-definition` skill (using `machineName`, `index.jsx`, and matching `.stories.jsx`).
+* **Implementation:** Use React `.jsx`, Tailwind CSS 4 with the `cn()` utility, and Class Variance Authority (CVA).
+* **Component Registration:** Ensure components are registered according to the `canvas-component-definition` skill.
+
+## 3. If `canvas_stack` == "react_decoupled"
+
+If the project is configured for **React Decoupled**, you are building components in an external Vite/Next.js/React application that connects to Drupal solely via JSON:API.
+
+**Rules you MUST follow:**
+* **Data Fetching:** You are connecting an external app to Drupal. You MUST use JSON:API, SWR, and tools like `drupal-jsonapi-params` to fetch Canvas data. See `.agent/skills/external/canvas-react-skills/canvas-data-fetching/SKILL.md`.
+* **Component Mapping:** The external React app must maintain a mapping between the Canvas component IDs (sent via JSON API) and its own local React components.
+* **CORS and Drupal Backend:** The Drupal backend's ONLY responsibility in this scenario is providing the entity data and Canvas UUID models through its REST/JSON:API endpoints. CORS must be configured properly in Drupal to allow the frontend to consume it.
 
 ---
 

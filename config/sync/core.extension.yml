@@ -28,6 +28,7 @@ module:
   help: 0
   history: 0
   image: 0
+  jsonapi: 0
   language: 0
   link: 0
   locale: 0
@@ -45,6 +46,7 @@ module:
   portal_seed_custom: 0
   redirect: 0
   search: 0
+  serialization: 0
   sharethis: 0
   shortcut: 0
   system: 0
