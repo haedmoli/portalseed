@@ -9,19 +9,6 @@ use Drupal\Core\Url;
 use Drupal\Core\Language\LanguageInterface;
 
 /**
- * Implements hook_toolbar_alter().
- */
-function seed_theme_toolbar_alter(&$items) {
-  if (isset($items['canvas'])) {
-    // Force the Canvas URL to be non-localized (no /es/ prefix).
-    // This fixes the issue where /es/canvas shows a blank page.
-    $items['canvas']['tab']['#url'] = Url::fromRoute('canvas.boot.empty', [], [
-      'language' => \Drupal::languageManager()->getLanguage(LanguageInterface::LANGCODE_NOT_SPECIFIED),
-    ]);
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_node_alter().
  */
 function seed_theme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
@@ -30,4 +17,19 @@ function seed_theme_theme_suggestions_node_alter(array &$suggestions, array $var
 
   // Add suggestion: node--bundle--view-mode
   $suggestions[] = 'node__' . $node->bundle() . '__' . $view_mode;
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function seed_theme_toolbar_alter(&$items) {
+  if (isset($items['canvas'])) {
+    // Force the Canvas URL to be non-localized (no /es/ prefix).
+    // This fixes the issue where /es/canvas shows a blank page.
+    $items['canvas']['tab']['#url'] = \Drupal\Core\Url::fromUserInput('/canvas', [
+      'absolute' => TRUE,
+      'prefix' => '',
+      'language' => \Drupal::languageManager()->getLanguage(\Drupal\Core\Language\LanguageInterface::LANGCODE_NOT_SPECIFIED),
+    ]);
+  }
 }

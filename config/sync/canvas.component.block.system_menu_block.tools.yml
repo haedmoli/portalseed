@@ -20,9 +20,32 @@ versioned_properties:
         expand_all_items: false
     fallback_metadata:
       slot_definitions: null
+  7a9e0103f91cf338:
+    settings:
+      default_settings:
+        id: 'system_menu_block:tools'
+        label: Tools
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+  f71a05dc329b181d:
+    settings:
+      default_settings:
+        id: 'system_menu_block:tools'
+        label: Herramientas
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
 label: Herramientas
 id: block.system_menu_block.tools
 provider: system
 source: block
 source_local_id: 'system_menu_block:tools'
-weight: 0

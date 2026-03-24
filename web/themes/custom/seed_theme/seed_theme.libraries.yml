@@ -13,3 +13,12 @@ global:
 
   js:
     js/script.js: {}
+
+contact-hero:
+  css:
+    component:
+      components/contacto/contact-hero/contact-hero.css: {}
+  js:
+    components/contacto/contact-hero/contact-hero.js: {}
+  dependencies:
+    - core/drupal

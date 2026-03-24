@@ -15,9 +15,26 @@ versioned_properties:
         provider: shortcut
     fallback_metadata:
       slot_definitions: null
+  a607413ff469120a:
+    settings:
+      default_settings:
+        id: shortcuts
+        label: Shortcuts
+        label_display: '0'
+        provider: shortcut
+    fallback_metadata:
+      slot_definitions: null
+  e82af917c66520df:
+    settings:
+      default_settings:
+        id: shortcuts
+        label: Atajos
+        label_display: '0'
+        provider: shortcut
+    fallback_metadata:
+      slot_definitions: null
 label: Atajos
 id: block.shortcuts
 provider: shortcut
 source: block
 source_local_id: shortcuts
-weight: 0

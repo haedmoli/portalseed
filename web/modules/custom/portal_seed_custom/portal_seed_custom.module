@@ -14,9 +14,11 @@ use Drupal\Core\Language\LanguageInterface;
 function portal_seed_custom_toolbar_alter(&$items) {
   if (isset($items['canvas'])) {
     // Force the Canvas URL to be non-localized (no /es/ prefix).
-    // This fixes the issue where /es/canvas shows a blank page.
-    $items['canvas']['tab']['#url'] = Url::fromRoute('canvas.boot.empty', [], [
-      'language' => \Drupal::languageManager()->getLanguage(LanguageInterface::LANGCODE_NOT_SPECIFIED),
+    // We use fromUserInput and explicitly clear the prefix/language options.
+    $items['canvas']['tab']['#url'] = \Drupal\Core\Url::fromUserInput('/canvas', [
+      'absolute' => TRUE,
+      'prefix' => '',
+      'language' => \Drupal::languageManager()->getLanguage(\Drupal\Core\Language\LanguageInterface::LANGCODE_NOT_SPECIFIED),
     ]);
   }
 }

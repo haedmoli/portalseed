@@ -16,9 +16,28 @@ versioned_properties:
         page_id: null
     fallback_metadata:
       slot_definitions: null
+  66936558a0932f6b:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Search form'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
+  223b6213cc972bc9:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Formulario de búsqueda'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
 label: 'Formulario de búsqueda'
 id: block.search_form_block
 provider: search
 source: block
 source_local_id: search_form_block
-weight: 0

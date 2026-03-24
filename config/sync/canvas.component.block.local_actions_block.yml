@@ -13,9 +13,26 @@ versioned_properties:
         provider: core
     fallback_metadata:
       slot_definitions: null
+  29753123eb31b8ab:
+    settings:
+      default_settings:
+        id: local_actions_block
+        label: 'Primary admin actions'
+        label_display: '0'
+        provider: core
+    fallback_metadata:
+      slot_definitions: null
+  18f8f3540038ea0a:
+    settings:
+      default_settings:
+        id: local_actions_block
+        label: 'Acciones principales de administración'
+        label_display: '0'
+        provider: core
+    fallback_metadata:
+      slot_definitions: null
 label: 'Acciones principales de administración'
 id: block.local_actions_block
 provider: core
 source: block
 source_local_id: local_actions_block
-weight: 0
